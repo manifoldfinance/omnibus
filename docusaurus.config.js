@@ -26,14 +26,30 @@ const config = {
           editUrl:
             'https://github.com/manifoldfinance/omnibus/edit/master/',
           },
-          customCss: require.resolve('./src/css/custom.css'),
+          theme: {
+            customCss: require.resolve('./src/css/custom.css'),
+          },
         },
+        
     ],
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
+      announcementBar: {
+        id: 'support_us',
+        content:
+          'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: false,
+      },
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 5,
+      },
       navbar: {
+        hideOnScroll: true,
         title: '🌀 Manifold',
         items: [
           {
@@ -50,7 +66,7 @@ const config = {
               },
               {
                 label: 'MasterChef v2',
-                href: '',
+                href: '#',
               },
             ],
           },
@@ -64,7 +80,7 @@ const config = {
               },
               {
                 label: 'MasterChef',
-                href: '',
+                href: '#',
               },
               {
                 label: 'Trident',
@@ -72,7 +88,7 @@ const config = {
               },
               {
                 label: 'BentoVault',
-                href: '',
+                href: '#',
               },
               {
                 label: 'Miso Launchpad',
