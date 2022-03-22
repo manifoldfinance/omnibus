@@ -1,111 +1,136 @@
+// @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
+
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
-module.exports = {
+/** @type {import('@docusaurus/types').Config} */
+const config = {
   title: 'Manifold Finance',
-  tagline: 'Omnibus Documentation',
-  url: 'https://docs.maniofldifnance.com',
+  tagline: 'Manifold Finance Engineering Documentation',
+  url: 'https://engineering.manifoldfinance.com',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon/favicon.ico',
   organizationName: 'manifoldfinance', // Usually your GitHub org/user name.
-  projectName: 'omnibus', // Usually your repo name.
-  themeConfig: {
-    navbar: {
-      title: 'Manifold Finance',
-      logo: {
-        alt: 'Manifold Finance logo',
-        src: 'img/manifold-icon-text-horizontal.svg',
-        href: 'https://manifoldfinance.com',
-        target: '_self'
-      },
-      items: [
-        { to: 'https://manifoldfinance.com/explore', label: 'Rules', position: 'left', target: '_self' },
-        { to: 'https://manifoldfinance.com/editor', label: 'Playground', position: 'left', target: '_self' },
-        { to: 'https://manifoldfinance.com/manage', label: 'Dashboard', position: 'left', target: '_self' },
-        { to: 'https://manifoldfinance.com/docs/', label: 'Docs', position: 'left', target: '_self' },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/manifoldfinance/omnibus',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Manifold Finance, Inc.`,
-    },
-    prism: {
-      theme: lightCodeTheme,
-      darkTheme: darkCodeTheme,
-    },
-  },
+  projectName: 'engineering-docs', // Usually your repo name.
   presets: [
     [
       '@docusaurus/preset-classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/manifoldfinance/omnibus/edit/master/website/',
+            'https://github.com/manifoldfinance/omnibus/edit/master/',
+          versions: {
+            current: {
+              label: 'current',
+            },
+          },
+          lastVersion: 'current',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/manifoldfinance/omnibus/edit/master/website/blog/',
+            'https://github.com/manifoldfinance/omnibus/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       },
     ],
-    [
-      '@docusaurus/plugin-sitemap',
-        {
-          changefreq: 'weekly',
-          priority: 0.5,
-          trailingSlash: false,
-        },
-    ],
   ],
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    {
+      navbar: {
+        title: '🌀 Manifold',
+        items: [
+          {
+            label: 'Guidebook',
+            position: 'left',
+            items: [
+              {
+                label: 'Yield Farming and Strategies',
+                href: '#',
+              },
+              {
+                label: 'Limit order protocol',
+                href: '#',
+              },
+              {
+                label: 'MasterChef v2',
+                href: '/docs/onsen/masterchef/masterchef2',
+              },
+            ],
+          },
+          {
+            label: 'Protocols',
+            position: 'left',
+            items: [
+              {
+                label: 'Sushiswap',
+                href: '#',
+              },
+              {
+                label: 'MasterChef',
+                href: '/docs/onsen/masterchef/introduction',
+              },
+              {
+                label: 'Trident',
+                href: '#',
+              },
+              {
+                label: 'BentoVault',
+                href: '/docs/bentobox/concepts',
+              },
+              {
+                label: 'Miso Launchpad',
+                href: '#',
+              },
+            ],
+          },
+          {
+            label: 'Incentive Programs',
+            position: 'right',
+            href: '#',
+          },
+          {
+            label: 'Deploy Strategy',
+            position: 'right',
+            href: '#',
+          },
+          {
+            href: 'https://www.npmjs.com/search?q=%40sushiswap',
+            label: '@sushiswap/sdk',
+            position: 'right',
+          },
+          {
+            href: 'https://github.com/sushiswap',
+            label: 'GitHub',
+            position: 'right',
+          },
+        ],
+      },
+      algolia: {
+        apiKey: 'b6b058ad8567fd68f16ec803fefef589',
+        indexName: 'sushiswap',
+        contextualSearch: true,
+        appId: 'XOPRM3IJU6',
+        searchParameters: {},
+        facetFilters: [],
+      },
+      prism: {
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
+      },
+    },
 };
+
+module.exports = config;
