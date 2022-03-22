@@ -6,9 +6,9 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Onsen Bar',
+    title: 'OpenMEV',
     description:
-      'Onsen aims to bring new liquidity to SushiSwap, decrease slippage, expand our pool offerings, and foster exciting synergistic partnerships with other DeFi projects.',
+      'OpenMEV aims to bring new liquidity to SushiSwap, decrease slippage, expand our pool offerings, and foster exciting synergistic partnerships with other DeFi projects.',
     image: <div className={clsx(styles.featureCardImage, styles.onsenImage)} />,
     links: [
       {
@@ -137,7 +137,7 @@ function Feature({ title, description, image, links }) {
 export default function HomepageFeatures() {
   return (
     <section>
-      <h2 className={styles.featureListTitle}>Protocols</h2>
+      <h2 className={styles.featureListTitle}>Manifold Platform Hub</h2>
       <div className={styles.featureList}>
         {FeatureList.map((props, idx) => (
           <Feature key={idx} {...props} />

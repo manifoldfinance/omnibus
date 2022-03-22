@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './HomepagePreFooter.module.css';
 
 const PreFooterData = {
-  title: 'Manifold Finance',
+  title: '🌀 Manifold Finance',
   text: 'Connecting you to DeFi Opportunities',
   button: {
     title: 'Launch dApp',

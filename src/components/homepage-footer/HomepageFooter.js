@@ -15,7 +15,7 @@ import styles from './HomepageFooter.module.css';
 const FooterLinks = {
   links: [
     {
-      title: 'Protocols',
+      title: 'Markets',
       links: [
         {
           title: 'Liquidity',
