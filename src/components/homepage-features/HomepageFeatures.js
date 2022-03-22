@@ -16,7 +16,7 @@ const FeatureList = [
         href: '#',
       },
       {
-        title: 'Incentives',
+        title: 'Integrations',
         href: '#',
       },
       {
@@ -24,7 +24,7 @@ const FeatureList = [
         href: '#',
       },
       {
-        title: 'Sushi Guard',
+        title: 'OpenMEV',
         href: '#',
       },
       {
@@ -35,9 +35,9 @@ const FeatureList = [
     ],
   },
   {
-    title: 'Bentobox',
+    title: 'OpenMEV',
     description:
-      'BentoBox is a token vault that generates yield for the capital deposited into it. The vault uses low-risk farming strategies and is the foundation for all of Sushis financial instruments',
+      'OpenMEV is a decentralized protocol that incentives liquidity and liquidity rebates for protocols and liquidity.',
     image: (
       <div
         className={clsx(
@@ -48,15 +48,15 @@ const FeatureList = [
     ),
     links: [
       {
-        title: 'Active Boxes',
+        title: 'Overview',
         href: '/docs/bentobox/introduction',
       },
       {
-        title: 'Vault Concepts',
+        title: 'Concepts',
         href: '/docs/bentobox/concepts',
       },
       {
-        title: 'Strategies',
+        title: 'Connecting and usage',
         href: '#',
       },
       {
@@ -67,9 +67,9 @@ const FeatureList = [
     ],
   },
   {
-    title: 'MiSO',
+    title: 'Fold Vaults',
     description:
-      'MISO is a suite of open-source smart contracts created to ease the process of launching a new project on the Sushi. MISO aims to be the place for token creators and communities to launch new project tokens. ',
+      'Fold Vaults is a protocol that incentivizes liquidity and liquidity rebates for protocols and liquidity.',
     image: (
       <div className={clsx(styles.featureCardImage, styles.sushipartyImage)} />
     ),
@@ -79,11 +79,11 @@ const FeatureList = [
         href: '#',
       },
       {
-        title: 'Auctions',
+        title: 'Vaults',
         href: '#',
       },
       {
-        title: 'Partner Programs',
+        title: 'Contract APIs',
         href: '#',
       },
     ],
