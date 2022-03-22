@@ -1,4 +1,4 @@
-name: Deploy
+name: Release
 
 on:
   push:
@@ -60,15 +60,6 @@ jobs:
         id: build
         run: |
           yarn run build
-
-      - name: Publish
-        uses: netlify/actions/build@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_BASE: build
-          NETLIFY_CMD: yarn install && yarn run build
-          NETLIFY_DIR: build/
 
       - name: Create GitHub Release
         id: create_release
