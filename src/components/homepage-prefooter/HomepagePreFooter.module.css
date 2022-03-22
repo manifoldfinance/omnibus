@@ -10,7 +10,7 @@
 }
 
 .prefooterTitle {
-    color: var(--sushi-title);
+    color: var(--manifold-title);
     font-weight: 900;
     font-size: 54px;
     line-height: 63px;
@@ -18,7 +18,7 @@
 }
 
 .prefooterText {
-    color: var(--sushi-text-2);
+    color: var(--manifold-text-2);
     font-size: 16px;
     line-height: 26px;
     margin-bottom: 48px;
@@ -35,10 +35,10 @@
     border-radius: 16px;
     font-weight: 500;
     font-size: 16px;
-    color: var(--sushi-common-title);
+    color: var(--manifold-common-title);
     cursor: pointer;
     text-decoration: none;
-    background-color: var(--sushi-common-button);
+    background-color: var(--manifold-common-button);
 }
 
 .prefooterButton:hover {

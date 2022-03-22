@@ -25,25 +25,9 @@ const config = {
           // Please change this to your repo.
           editUrl:
             'https://github.com/manifoldfinance/omnibus/edit/master/',
-          versions: {
-            current: {
-              label: 'current',
-            },
           },
-          lastVersion: 'current',
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/manifoldfinance/omnibus/edit/master/',
-        },
-        theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      },
     ],
   ],
   themeConfig:
@@ -66,7 +50,7 @@ const config = {
               },
               {
                 label: 'MasterChef v2',
-                href: '/docs/onsen/masterchef/masterchef2',
+                href: '',
               },
             ],
           },
@@ -80,7 +64,7 @@ const config = {
               },
               {
                 label: 'MasterChef',
-                href: '/docs/onsen/masterchef/introduction',
+                href: '',
               },
               {
                 label: 'Trident',
@@ -88,7 +72,7 @@ const config = {
               },
               {
                 label: 'BentoVault',
-                href: '/docs/bentobox/concepts',
+                href: '',
               },
               {
                 label: 'Miso Launchpad',
@@ -108,11 +92,11 @@ const config = {
           },
           {
             href: 'https://www.npmjs.com/search?q=%40sushiswap',
-            label: '@sushiswap/sdk',
+            label: '@disco3/react',
             position: 'right',
           },
           {
-            href: 'https://github.com/sushiswap',
+            href: 'https://github.com/manifoldfinance',
             label: 'GitHub',
             position: 'right',
           },
