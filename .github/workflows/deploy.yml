@@ -11,28 +11,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  # Wait for up to a minute for previous run to complete, abort if not done by then
-  pre-run:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - name: 'Block Concurrent Executions'
-        uses: softprops/turnstyle@v1
-        with:
-          poll-interval-seconds: 10
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
   bump_version:
     name: Bump Version
-    needs: pre-run
     runs-on: ubuntu-latest
     outputs:
       new_tag: ${{ steps.github_tag_action.outputs.new_tag }}
       changelog: ${{ steps.github_tag_action.outputs.changelog }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Bump version and push tag
         id: github_tag_action
@@ -65,16 +52,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Install Dependencies
+        id: install
         run: |
           yarn install
+          
       - name: Build
+        id: build
         run: |
           yarn run build
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.0
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: build # The folder the action should deploy.
 
       - name: Publish
         uses: netlify/actions/build@master
@@ -94,4 +79,4 @@ jobs:
           tag_name: ${{ needs.bump_version.outputs.new_tag }}
           release_name: Release ${{ needs.bump_version.outputs.new_tag }}
           body: |
-            New version ${{ needs.bump_version.outputs.new_tag }}
+            latest version ${{ needs.bump_version.outputs.new_tag }}
