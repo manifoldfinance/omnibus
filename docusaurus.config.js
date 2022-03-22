@@ -14,7 +14,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon/favicon.ico',
   organizationName: 'manifoldfinance', // Usually your GitHub org/user name.
-  projectName: 'engineering-docs', // Usually your repo name.
+  projectName: 'omnibus', // Usually your repo name.
   presets: [
     [
       '@docusaurus/preset-classic',

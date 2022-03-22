@@ -1,0 +1,8 @@
+position: 1 # float position is supported
+label: 'Partners and Integrations'
+collapsible: true # make the category collapsible
+collapsed: false # keep the category open by default
+className: red
+link:
+  type: generated-index
+  title: Partners and Integrations

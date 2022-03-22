@@ -177,19 +177,3 @@ In the current draft, the exact pending amount has to be available for a
 withdraw to succeed. This may cause issues because of rounding errors in case
 there is only one user in the pool but also protects the user from withdrawing
 without their allocated SUSHI.
-
-##
-
-Draft
-
-##
-
-Test
-
-##
-
-Changes of Total Allocation in MCV1 and allocation of Master Pool
-
-If the total Allocation of MCV1 is changed or the allocation point of the master
-pool, all pools on MCV2 have to be updated as well before the update on MCV1,
-the Gnosis Safe should be used to update within the same transaction.
