@@ -1,39 +1,53 @@
-import React from 'react';
-import clsx from 'clsx';
+import Head from '@docusaurus/core/lib/client/exports/Head';
+import HomePageBackgroundImage from '../../static/img/_bg.svg';
+import HomepageDeveloperLinks from '../components/homepage-developer-links/HomepageDeveloperLinks';
+import HomepageFeatures from '../components/homepage-features/HomepageFeatures';
+import HomepageFooter from '../components/homepage-footer/HomepageFooter';
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import React from 'react';
 import styles from './index.module.css';
-import HomepageFeatures from '../components/HomepageFeatures';
+import useBaseUrl from '@docusaurus/core/lib/client/exports/useBaseUrl';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
+    <header className={styles.headerWrap}>
+      <h1 className={styles.mainTitle}></h1>
     </header>
   );
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+      pageClassName={styles.mainLayout}
+      description="Be a DeFi Chef with Sushi."
+    >
+      <Head>
+        <title>Sushi | Knowledgebase</title>
+        <meta property="og:title" content="Sushi | Knowledgebase" />
+        <meta property="og:description" content="Be a DeFi Chef with Sushi." />
+        <meta property="og:url" content="https://docs.sushiguard.com/" />
+        <meta property="og:image" content="" />
+        <meta property="og:site_name" content="Sushiswap Documentation" />
+        <meta property="og:type" content="website" />
+        <meta property="twitter:title" content="Sushi | Knowledgebase" />
+        <meta name="twitter:description" content="Be a DeFi Chef with Sushi." />
+        <meta name="twitter:image:alt" content="Sushi | Knowledgebase" />
+        <meta name="twitter:image" content="" />
+        <meta name="twitter:site" content="@sushiswap" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      <main className={styles.mainContainer}>
+        <div className="page-container">
+          <HomepageHeader />
+          <div className={styles.section}>
+            <HomepageFeatures />
+          </div>
+          <div className={styles.section2}>
+            <HomepageDeveloperLinks />
+          </div>
+        </div>
+        <HomepageFooter />
       </main>
     </Layout>
   );
