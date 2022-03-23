@@ -5,3 +5,7 @@
 *.svg
 *.png
 *.xml
+build/
+.docusarus/
+.cache/
+dist/

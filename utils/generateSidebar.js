@@ -18,91 +18,101 @@
 // sidebar_category_order: the sort order of the category
 //
 
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 
-const isMarkdown = /\.md$/i
+const isMarkdown = /\.md$/i;
 
 // TODO: use a more efficient way to achieve this
 function findInFrontMatter(contents, property) {
-  const regMatch = new RegExp(`^${property}:\\s+(.*?)$`, 'i')
-  let frontmatter
+  const regMatch = new RegExp(`^${property}:\\s+(.*?)$`, 'i');
+  let frontmatter;
   let value = contents.split('\n').find((line, i) => {
     if (line === '---') {
-      frontmatter = !frontmatter
+      frontmatter = !frontmatter;
     } else if (frontmatter) {
-      return line.indexOf(`${property}: `) === 0
+      return line.indexOf(`${property}: `) === 0;
     }
-    return false
-  })
+    return false;
+  });
 
-  return value ? value.match(regMatch)[1] : null
+  return value ? value.match(regMatch)[1] : null;
 }
 
-function generateSidebar({baseDir, sourceDir, ignoreDirectories = ''}) {
-  ignoreDirectories = '(' + ignoreDirectories.replace(',', '|') + ')'
-  const ignoreDirectoriesRegex = new RegExp(ignoreDirectories)
-  const searchIn = path.join(baseDir, sourceDir)
+function generateSidebar({ baseDir, sourceDir, ignoreDirectories = '' }) {
+  ignoreDirectories = '(' + ignoreDirectories.replace(',', '|') + ')';
+  const ignoreDirectoriesRegex = new RegExp(ignoreDirectories);
+  const searchIn = path.join(baseDir, sourceDir);
 
-  const files = fs.readdirSync(searchIn, {withFileTypes: true})
+  const files = fs.readdirSync(searchIn, { withFileTypes: true });
 
-  const items = files.sort().map(dirent => {
-    const {name} = dirent
-    const filePath = path.join(sourceDir, name)
-    const ignoreDirectory = sourceDir.match(ignoreDirectoriesRegex);
+  const items = files
+    .sort()
+    .map((dirent) => {
+      const { name } = dirent;
+      const filePath = path.join(sourceDir, name);
+      const ignoreDirectory = sourceDir.match(ignoreDirectoriesRegex);
 
-    if (dirent.isDirectory() && !ignoreDirectory) {
-      const items = generateSidebar({baseDir, sourceDir: filePath, ignoreDirectories})
-      const introItem = items.find(item => typeof item === 'string')
+      if (dirent.isDirectory() && !ignoreDirectory) {
+        const items = generateSidebar({
+          baseDir,
+          sourceDir: filePath,
+          ignoreDirectories,
+        });
+        const introItem = items.find((item) => typeof item === 'string');
 
-      let label
-      let sortOrder
+        let label;
+        let sortOrder;
 
-      if (introItem) {
-        const contents = fs.readFileSync(path.join(searchIn, `${introItem}.md`), 'utf8')
+        if (introItem) {
+          const contents = fs.readFileSync(
+            path.join(searchIn, `${introItem}.md`),
+            'utf8',
+          );
 
-        label = findInFrontMatter(contents, 'sidebar_category')
-        sortOrder = findInFrontMatter(contents, 'sidebar_category_order')
+          label = findInFrontMatter(contents, 'sidebar_category');
+          sortOrder = findInFrontMatter(contents, 'sidebar_category_order');
+        }
+
+        return {
+          type: 'category',
+          label: label || name,
+          sortOrder: sortOrder ? Number(sortOrder) : Infinity,
+          items,
+        };
       }
+
+      if (!filePath.match(isMarkdown)) {
+        return;
+      }
+
+      const contents = fs.readFileSync(path.join(searchIn, name), 'utf8');
+      let sortOrder = findInFrontMatter(contents, 'sidebar_sort_order');
+      sortOrder = sortOrder ? Number(sortOrder) : Infinity;
+
+      const fileId = filePath.replace(isMarkdown, '');
 
       return {
-        type: 'category',
-        label: label || name,
-        sortOrder: sortOrder ? Number(sortOrder) : Infinity,
-        items,
+        type: 'doc',
+        id: fileId,
+        sortOrder,
+      };
+    })
+    .filter((i) => !!i)
+    .sort((a, b) => {
+      if (a.sortOrder != null && b.sortOrder != null) {
+        return a.sortOrder - b.sortOrder;
       }
-    }
 
-    if (!filePath.match(isMarkdown)) {
-      return
-    }
-
-    const contents = fs.readFileSync(path.join(searchIn, name), 'utf8')
-    let sortOrder = findInFrontMatter(contents, 'sidebar_sort_order')
-    sortOrder = sortOrder ? Number(sortOrder) : Infinity
-
-    const fileId = filePath.replace(isMarkdown, '')
-
-    return {
-      type: 'doc',
-      id: fileId,
-      sortOrder,
-    }
-  }).filter(i => !!i).sort((a, b) => {
-
-    if (a.sortOrder != null && b.sortOrder != null) {
-      return a.sortOrder - b.sortOrder
-    }
-
-    if (a.sortOrder != null & b.sortOrder == null) {
-      return -1
-    }
-    return 1
-  })
+      if ((a.sortOrder != null) & (b.sortOrder == null)) {
+        return -1;
+      }
+      return 1;
+    });
 
   // remove additional sidebar properties not supported
   // by docusaurus to avoid errors and warnings.
-  return items.map(({id, sortOrder, ...item}) => id || item)
+  return items.map(({ id, sortOrder, ...item }) => id || item);
 }
 
-module.exports = generateSidebar
+module.exports = generateSidebar;

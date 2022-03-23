@@ -23,14 +23,12 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/manifoldfinance/omnibus/edit/master/',
-          },
-          theme: {
-            customCss: require.resolve('./src/css/custom.css'),
-          },
+          editUrl: 'https://github.com/manifoldfinance/omnibus/edit/master/',
         },
-        
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      },
     ],
   ],
   themeConfig:

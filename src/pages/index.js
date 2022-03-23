@@ -25,13 +25,25 @@ export default function Home() {
       <Head>
         <title>Manifold | Knowledgebase</title>
         <meta property="og:title" content="Manifold | Knowledgebase" />
-        <meta property="og:description" content="Connect to DeFi Opportunities with Manifold" />
-        <meta property="og:url" content="https://omnibus.manifoldfinance.com/" />
+        <meta
+          property="og:description"
+          content="Connect to DeFi Opportunities with Manifold"
+        />
+        <meta
+          property="og:url"
+          content="https://omnibus.manifoldfinance.com/"
+        />
         <meta property="og:image" content="" />
-        <meta property="og:site_name" content="Manifold Finance Documentation" />
+        <meta
+          property="og:site_name"
+          content="Manifold Finance Documentation"
+        />
         <meta property="og:type" content="website" />
         <meta property="twitter:title" content="Manifold | Documentation Hub" />
-        <meta name="twitter:description" content="Connect to DeFi Opportunities with Manifold" />
+        <meta
+          name="twitter:description"
+          content="Connect to DeFi Opportunities with Manifold"
+        />
         <meta name="twitter:image:alt" content="Manifold | Documentation Hub" />
         <meta name="twitter:image" content="" />
         <meta name="twitter:site" content="@foldfinance" />
