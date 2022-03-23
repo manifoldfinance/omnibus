@@ -131,7 +131,10 @@ export default function HomepageFooter() {
           <p className={styles.footerSubscribeText}>
             Listings, events, and more
           </p>
-          <Link to="https://manifoldfinance.github.io/primitives/" className={styles.footerSubscribeButton}>
+          <Link
+            to="https://manifoldfinance.github.io/primitives/"
+            className={styles.footerSubscribeButton}
+          >
             <span className={styles.footerSubscribeButtonText}>Subscribe</span>
             <ChevronRightImg />
           </Link>
@@ -152,7 +155,8 @@ export default function HomepageFooter() {
         <div className={styles.footerLogoContainer}>
           <FooterLogoImage className={styles.footerLogo} />
           <span>
-            &#169; {new Date().getFullYear()} Manifold Finance, Inc - All Rights Reserved{' '}
+            &#169; {new Date().getFullYear()} Manifold Finance, Inc - All Rights
+            Reserved{' '}
           </span>
         </div>
         <a
@@ -162,7 +166,7 @@ export default function HomepageFooter() {
           FOLDv1
         </a>
         <a href="" target="_blank">
-         📚 Manifold Finance Contributors
+          📚 Manifold Finance Contributors
         </a>
       </div>
     </section>

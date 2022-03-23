@@ -21,6 +21,5 @@ module.exports = {
   tabWidth: 2,
   trailingComma: 'all',
   useTabs: false,
-embeddedLanguageFormatting: "auto"
-
+  embeddedLanguageFormatting: 'auto',
 };

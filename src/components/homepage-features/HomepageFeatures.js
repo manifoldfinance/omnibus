@@ -8,8 +8,8 @@ const FeatureList = [
   {
     title: 'OpenMEV',
     description:
-      'OpenMEV aims to bring new liquidity to SushiSwap, decrease slippage, expand our pool offerings, and foster exciting synergistic partnerships with other DeFi projects.',
-    image: <div className={clsx(styles.featureCardImage, styles.onsenImage)} />,
+      'OpenMEV  enables protocols to recapture arbitrage opportunities and liquidity by offering a percentage of the protocols harvest upfront, today.',
+    image: <div className={clsx(styles.featureCardImage, styles.defiTokens)} />,
     links: [
       {
         title: 'Introduction',
@@ -71,7 +71,7 @@ const FeatureList = [
     description:
       'Fold Vaults is a protocol that incentivizes liquidity and liquidity rebates for protocols and liquidity.',
     image: (
-      <div className={clsx(styles.featureCardImage, styles.sushipartyImage)} />
+      <div className={clsx(styles.featureCardImage, styles.exploreEthereum)} />
     ),
     links: [
       {
@@ -113,7 +113,7 @@ function Feature({ title, description, image, links }) {
                   <span>{link.title}</span>
                   {link.isSwagger && (
                     <span className={styles.featureCardLinkSwagger}>
-                      Swagger
+                      API Spec
                     </span>
                   )}
                   {link.versionLabel && (
