@@ -1,7 +1,11 @@
 ---
-title: Markdown page example
+title: '[docs]: Workflow Job Failed'
+author: 'sambacha'
+labels: 'bug'
 ---
-
 # Markdown page example
 
-You don't need React to write simple standalone pages.
+- Event : {{ event }}
+- Ref: {{ ref }}
+- Sha: {{ sha }}
+- Workflow: {{ workflow }}

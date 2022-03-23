@@ -4,11 +4,11 @@ import React from 'react';
 import styles from './HomepagePreFooter.module.css';
 
 const PreFooterData = {
-  title: 'Sushiswap',
-  text: 'Be a DeFi Chef with Sushi',
+  title: '🌀 Manifold Finance',
+  text: 'Connecting you to DeFi Opportunities',
   button: {
     title: 'Launch dApp',
-    href: 'https://app.sushi.com',
+    href: 'https://staking.manifoldfinance.com',
   },
   image: require('../homepage-prefooter/img/image-footer.png').default,
 };

@@ -6,7 +6,7 @@ _BoringCrypto, Keno_
 
 The BentoBox is a vault for tokens. The stored tokens can be flash loaned and
 used in strategies. Yield from this will go to the token depositors. Rebasing
-tokens ARE NOT supported and WILL cause loss of funds. Any funds transfered
+tokens ARE NOT supported and WILL cause loss of funds. Any funds transferred
 directly onto the BentoBox will be lost, use the deposit function instead.
 
 ## Methods

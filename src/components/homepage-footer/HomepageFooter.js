@@ -15,18 +15,18 @@ import styles from './HomepageFooter.module.css';
 const FooterLinks = {
   links: [
     {
-      title: 'Protocols',
+      title: 'Markets',
       links: [
         {
-          title: 'Sushi Liquidity',
+          title: 'Liquidity',
           link: '#',
         },
         {
-          title: 'Bentobox Staking',
+          title: 'Staking',
           link: '#',
         },
         {
-          title: 'Kashi Lending',
+          title: 'Lending',
           link: '#',
         },
       ],
@@ -127,11 +127,11 @@ export default function HomepageFooter() {
           ))}
         </div>
         <div>
-          <p className={styles.footerSubscribeTitle}>Omakase Report</p>
+          <p className={styles.footerSubscribeTitle}>Primitives Report</p>
           <p className={styles.footerSubscribeText}>
             Listings, events, and more
           </p>
-          <Link to="#" className={styles.footerSubscribeButton}>
+          <Link to="https://manifoldfinance.github.io/primitives/" className={styles.footerSubscribeButton}>
             <span className={styles.footerSubscribeButtonText}>Subscribe</span>
             <ChevronRightImg />
           </Link>
@@ -152,17 +152,17 @@ export default function HomepageFooter() {
         <div className={styles.footerLogoContainer}>
           <FooterLogoImage className={styles.footerLogo} />
           <span>
-            &#169; {new Date().getFullYear()} Sushiswap Community - CC4.0{' '}
+            &#169; {new Date().getFullYear()} Manifold Finance, Inc - All Rights Reserved{' '}
           </span>
         </div>
         <a
-          href="https://etherscan.io/address/0x11Ca5375AdAfd6205E41131A4409f182677996E6#readContract"
+          href="https://etherscan.io/address/0xd084944d3c05cd115c09d072b9f44ba3e0e45921"
           target="_blank"
         >
-          BoringHelperV2
+          FOLDv1
         </a>
         <a href="" target="_blank">
-          Made with 🍣 Tsukiji Fish Market
+         📚 Manifold Finance Contributors
         </a>
       </div>
     </section>

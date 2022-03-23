@@ -37,7 +37,7 @@
   width: 59px;
   height: 31px;
   border-radius: 30px;
-  background-color: var(--sushi-bg-toggle);
+  background-color: var(--manifold-bg-toggle);
   transition: all 0.2s ease;
 }
 
