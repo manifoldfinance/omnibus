@@ -7,7 +7,7 @@ const DeveloperList = [
   {
     link: '#',
     button: {
-      title: 'Register for Onsen',
+      title: 'Protocol Integrations',
       href: '#',
     },
     image: (
@@ -18,10 +18,10 @@ const DeveloperList = [
         )}
       />
     ),
-    title: 'Incentives program',
+    title: 'OpenMEV program',
     description: (
       <>
-        Incentivizing protocols and liquidity by rebates and discounts for
+        Incentivize protocols and liquidity by rebates and discounts for
         increasing volume and protocol TVL.
       </>
     ),
@@ -34,7 +34,7 @@ const DeveloperList = [
     image: (
       <div className={clsx(styles.developerCardImage, styles.bugBountyImage)} />
     ),
-    title: 'Bentobox strategies',
+    title: 'Vault Strategies',
     description: (
       <>
         Launch a new strategy today and get a percentage of the strategies

@@ -1,18 +1,18 @@
 ---
-id: doc-setup
-title: Strategies - Active and Passive
+id: doc-openmev
+title: OpenMEV
 hide_title: false
 hide_table_of_contents: false
-sidebar_label: Strategies
+sidebar_label: OpenMEV
 sidebar_position: 1
-pagination_label: Getting Started
-description: Strategies
+pagination_label: Introduction
+description: OpenMEV Specification
 keywords:
-  - vaults
-  - defi
-  - strategies
-  - apy
-  - risk
+  - technical
+  - specification
+  - openmev
+  - flashbots
+  - mev
 ---
 
 # Introduction

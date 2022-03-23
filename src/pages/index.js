@@ -20,21 +20,21 @@ export default function Home() {
   return (
     <Layout
       pageClassName={styles.mainLayout}
-      description="Be a DeFi Chef with Sushi."
+      description="Connect to DeFi Opportunities with Manifold"
     >
       <Head>
-        <title>Sushi | Knowledgebase</title>
-        <meta property="og:title" content="Sushi | Knowledgebase" />
-        <meta property="og:description" content="Be a DeFi Chef with Sushi." />
-        <meta property="og:url" content="https://docs.sushiguard.com/" />
+        <title>Manifold | Knowledgebase</title>
+        <meta property="og:title" content="Manifold | Knowledgebase" />
+        <meta property="og:description" content="Connect to DeFi Opportunities with Manifold" />
+        <meta property="og:url" content="https://omnibus.manifoldfinance.com/" />
         <meta property="og:image" content="" />
-        <meta property="og:site_name" content="Sushiswap Documentation" />
+        <meta property="og:site_name" content="Manifold Finance Documentation" />
         <meta property="og:type" content="website" />
-        <meta property="twitter:title" content="Sushi | Knowledgebase" />
-        <meta name="twitter:description" content="Be a DeFi Chef with Sushi." />
-        <meta name="twitter:image:alt" content="Sushi | Knowledgebase" />
+        <meta property="twitter:title" content="Manifold | Documentation Hub" />
+        <meta name="twitter:description" content="Connect to DeFi Opportunities with Manifold" />
+        <meta name="twitter:image:alt" content="Manifold | Documentation Hub" />
         <meta name="twitter:image" content="" />
-        <meta name="twitter:site" content="@sushiswap" />
+        <meta name="twitter:site" content="@foldfinance" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <main className={styles.mainContainer}>

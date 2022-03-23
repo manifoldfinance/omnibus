@@ -1,0 +1,1 @@
+{"rule":"MASS_AGREEMENT","sentence":"^\\Qowner address undefined\nspender address undefined\\E$"}

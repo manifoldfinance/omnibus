@@ -1,67 +1,67 @@
 :root {
-    --sushi-common-title: #FBFBFB;
-    --sushi-common-bg: rgba(108, 134, 173, 0.55);
-    --sushi-common-shadow: 0 0 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25);
-    --sushi-common-button: #2F8AF5;
-    --sushi-common-button-hover: #4399ff;
-    --sushi-common-text: #222222;
+    --manifold-common-title: #FBFBFB;
+    --manifold-common-bg: rgba(108, 134, 173, 0.55);
+    --manifold-common-shadow: 0 0 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25);
+    --manifold-common-button: #2F8AF5;
+    --manifold-common-button-hover: #4399ff;
+    --manifold-common-text: #222222;
 
-    --sushi-page-bg: #06070A;
-    --sushi-bg-image: rgba(255, 255, 255, 0.09);
+    --manifold-page-bg: #06070A;
+    --manifold-bg-image: rgba(255, 255, 255, 0.09);
 
-    --sushi-title: #FBFBFB;
-    --sushi-text: rgba(255, 255, 255, 0.6);
-    --sushi-text-2: #6C86AD;
-    --sushi-text-3: #FBFBFB;
-    --sushi-text-4: #FBFBFB;
-    --sushi-border: rgba(255, 255, 255, 0.25);
-    --sushi-bg-1: #000000;
-    --sushi-bg-2: #202835;
-    --sushi-bg-3: #FBFBFB;
-    --sushi-bg-4: rgba(6, 10, 16, 0.5);
-    --sushi-bg-5: #202835;
-    --sushi-bg-6: rgba(255, 255, 255, 0.09);
-    --sushi-bg-card: #FFFFFF;
-    --sushi-bg-header: #06070A;
-    --sushi-bg-toggle: #202835;
-    --sushi-shadow-1: 0 0 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25);
-    --sushi-shadow-2: none;
-    --sushi-text-2-hover: #FBFBFB;
+    --manifold-title: #FBFBFB;
+    --manifold-text: rgba(255, 255, 255, 0.6);
+    --manifold-text-2: #6C86AD;
+    --manifold-text-3: #FBFBFB;
+    --manifold-text-4: #FBFBFB;
+    --manifold-border: rgba(255, 255, 255, 0.25);
+    --manifold-bg-1: #000000;
+    --manifold-bg-2: #202835;
+    --manifold-bg-3: #FBFBFB;
+    --manifold-bg-4: rgba(6, 10, 16, 0.5);
+    --manifold-bg-5: #202835;
+    --manifold-bg-6: rgba(255, 255, 255, 0.09);
+    --manifold-bg-card: #FFFFFF;
+    --manifold-bg-header: #06070A;
+    --manifold-bg-toggle: #202835;
+    --manifold-shadow-1: 0 0 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25);
+    --manifold-shadow-2: none;
+    --manifold-text-2-hover: #FBFBFB;
 }
 
 :root[data-theme='light'] {
-    --sushi-page-bg: #f3f5fa;
-    --sushi-text: #222222;
-    --sushi-text-2: #6C86AD;
-    --sushi-text-3: #2F8AF5;
-    --sushi-text-4: #6C86AD;
-    --sushi-bg-image: rgba(108, 134, 173, 0.12);
-    --sushi-title: #1c1e21;
-    --sushi-border: rgba(0, 0, 0, 0.24);
-    --sushi-bg-1: #FFFFFF;
-    --sushi-bg-2: #FFFFFF;
-    --sushi-bg-3: #06070A;
-    --sushi-bg-4: #ECF0F9;
-    --sushi-bg-5: #FFFFFF;
-    --sushi-bg-6: #ECF0F9;
-    --sushi-bg-header: #FFFFFF;
-    --sushi-bg-toggle: #ECF0F9;
-    --sushi-shadow-1: 0 0 4px rgba(71, 73, 79, 0.05), 0 1px 2px rgba(71, 73, 79, 0.05);
-    --sushi-shadow-2: 0 0 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25);
-    --sushi-text-2-hover: #222222;
+    --manifold-page-bg: #f3f5fa;
+    --manifold-text: #222222;
+    --manifold-text-2: #6C86AD;
+    --manifold-text-3: #2F8AF5;
+    --manifold-text-4: #6C86AD;
+    --manifold-bg-image: rgba(108, 134, 173, 0.12);
+    --manifold-title: #1c1e21;
+    --manifold-border: rgba(0, 0, 0, 0.24);
+    --manifold-bg-1: #FFFFFF;
+    --manifold-bg-2: #FFFFFF;
+    --manifold-bg-3: #06070A;
+    --manifold-bg-4: #ECF0F9;
+    --manifold-bg-5: #FFFFFF;
+    --manifold-bg-6: #ECF0F9;
+    --manifold-bg-header: #FFFFFF;
+    --manifold-bg-toggle: #ECF0F9;
+    --manifold-shadow-1: 0 0 4px rgba(71, 73, 79, 0.05), 0 1px 2px rgba(71, 73, 79, 0.05);
+    --manifold-shadow-2: 0 0 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25);
+    --manifold-text-2-hover: #222222;
 }
 
 /*--Article color--*/
 :root {
-    --ifm-font-color-base: var(--sushi-title) !important;
-    --ifm-color-content-secondary: var(--sushi-text-2) !important;
-    --ifm-menu-color: var(--sushi-text-2) !important;
-    --ifm-toc-link-color: var(--sushi-text-2) !important;
-    --ifm-tabs-color: var(--sushi-title) !important;
-    --ifm-hr-border-color: var(--sushi-border) !important;
-    --ifm-toc-border-color: var(--sushi-border) !important;
-    --ifm-color-emphasis-300: var(--sushi-border) !important;
-    --ifm-color-primary: var(--sushi-common-button) !important;
+    --ifm-font-color-base: var(--manifold-title) !important;
+    --ifm-color-content-secondary: var(--manifold-text-2) !important;
+    --ifm-menu-color: var(--manifold-text-2) !important;
+    --ifm-toc-link-color: var(--manifold-text-2) !important;
+    --ifm-tabs-color: var(--manifold-title) !important;
+    --ifm-hr-border-color: var(--manifold-border) !important;
+    --ifm-toc-border-color: var(--manifold-border) !important;
+    --ifm-color-emphasis-300: var(--manifold-border) !important;
+    --ifm-color-primary: var(--manifold-common-button) !important;
     --ifm-table-stripe-background: rgba(47, 138, 245, 0.1) !important;
 }
 
@@ -126,18 +126,18 @@ p, a, h1, h2, h3 {
 }
 
 html {
-    background: var(--sushi-page-bg);
+    background: var(--manifold-page-bg);
 }
 
 .main-wrapper:not(.docs-wrapper) {
-    color: var(--sushi-text);
+    color: var(--manifold-text);
     font-family: 'Inter', sans-serif;
 }
 
 .main-wrapper:not(.docs-wrapper) h1,
 .main-wrapper:not(.docs-wrapper) h2,
 .main-wrapper:not(.docs-wrapper) h3 {
-    color: var(--sushi-title);
+    color: var(--manifold-title);
 }
 
 .page-container {
@@ -148,9 +148,9 @@ html {
 
 /* header START */
 .navbar {
-    background: var(--sushi-bg-header);
+    background: var(--manifold-bg-header);
     box-shadow: none;
-    border-bottom: 1px solid var(--sushi-border);
+    border-bottom: 1px solid var(--manifold-border);
 }
 
 .navbar__title {
@@ -163,7 +163,7 @@ html {
 
 .navbar-sidebar__brand {
     box-shadow: none;
-    border-bottom: 1px solid var(--sushi-border);
+    border-bottom: 1px solid var(--manifold-border);
 }
 
 .navbar__item {
@@ -175,18 +175,18 @@ html {
 }
 
 .navbar__link {
-    color: var(--sushi-text);
+    color: var(--manifold-text);
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
 }
 
 .navbar__item:hover .navbar__link {
-    color: var(--sushi-title);
+    color: var(--manifold-title);
 }
 
 .navbar__link:hover {
-    color: var(--sushi-text-3);
+    color: var(--manifold-text-3);
 }
 
 .navbar__item.navbar__link {
@@ -225,18 +225,18 @@ html {
 }
 
 .dropdown__menu {
-    background: var(--sushi-bg-5);
+    background: var(--manifold-bg-5);
     padding: 16px 0;
     border-radius: 16px;
     min-width: 156px;
-    box-shadow: var(--sushi-common-shadow);
+    box-shadow: var(--manifold-common-shadow);
     margin-bottom: 0 !important;
     top: 100%;
 }
 
 .dropdown__link {
     font-size: 16px;
-    color: var(--sushi-text);
+    color: var(--manifold-text);
     transition: .2s;
     padding: 8px 16px;
     border-radius: 0;
@@ -244,7 +244,7 @@ html {
 }
 
 .dropdown__link:hover {
-    background: var(--sushi-bg-4);
+    background: var(--manifold-bg-4);
 }
 
 .dropdown > .navbar__link:after {
@@ -267,7 +267,7 @@ html[data-theme='dark'] .dropdown > .navbar__link:after {
 }
 
 .navbar-sidebar {
-    background: var(--sushi-bg-1);
+    background: var(--manifold-bg-1);
 }
 
 .theme-doc-sidebar-menu .menu__link::after {
@@ -278,7 +278,7 @@ html[data-theme='dark'] .dropdown > .navbar__link:after {
     /* header END */
 
 .fileDownload_src-components-file-download-FileDownload-module {
-    border-color: var(--sushi-border) !important;
+    border-color: var(--manifold-border) !important;
     align-items: center !important;
 }
 
@@ -292,11 +292,11 @@ html[data-theme='dark'] .dropdown > .navbar__link:after {
 }
 
 .swagger-ui .info .title {
-    color: var(--sushi-title) !important;
+    color: var(--manifold-title) !important;
 }
 
 .swagger-ui .info h1, .swagger-ui .info h2, .swagger-ui .info h3, .swagger-ui .info h4, .swagger-ui .info h5 {
-    color: var(--sushi-title) !important;
+    color: var(--manifold-title) !important;
 }
 
 .swagger-ui .border-box, .swagger-ui a, .swagger-ui article, .swagger-ui body, .swagger-ui code, .swagger-ui dd,
@@ -306,11 +306,11 @@ html[data-theme='dark'] .dropdown > .navbar__link:after {
 .swagger-ui input[type=tel], .swagger-ui input[type=text], .swagger-ui input[type=url], .swagger-ui legend,
 .swagger-ui li, .swagger-ui main, .swagger-ui ol, .swagger-ui p, .swagger-ui pre, .swagger-ui section, .swagger-ui table,
 .swagger-ui td, .swagger-ui textarea, .swagger-ui th, .swagger-ui tr, .swagger-ui ul {
-    color: var(--sushi-title) !important;
+    color: var(--manifold-title) !important;
 }
 
 .arrow, button {
-    fill: var(--sushi-bg-3);
+    fill: var(--manifold-bg-3);
 }
 
 .models-control:hover {
@@ -318,11 +318,11 @@ html[data-theme='dark'] .dropdown > .navbar__link:after {
 }
 
 .swagger-ui .model-title {
-    color: var(--sushi-title) !important;
+    color: var(--manifold-title) !important;
 }
 
 .model-box-control, .model-box {
-    color: var(--sushi-title) !important;
+    color: var(--manifold-title) !important;
 }
 
 html[data-theme='dark'] .swagger-ui .model-toggle:after {
@@ -363,19 +363,19 @@ html[data-theme='dark'] .swagger-ui .model-toggle:after {
 
 .swagger-ui button,
 .swagger-ui select {
-    fill: var(--sushi-bg-3) !important;
+    fill: var(--manifold-bg-3) !important;
 }
 
 .swagger-ui .opblock .opblock-section-header {
-    background-color: var(--sushi-bg-2) !important;
+    background-color: var(--manifold-bg-2) !important;
 }
 
 .swagger-ui .btn {
-    color: var(--sushi-text) !important;
+    color: var(--manifold-text) !important;
 }
 
 .swagger-ui .opblock-body pre.microlight {
-    background: var(--sushi-common-bg) !important;
+    background: var(--manifold-common-bg) !important;
 }
 
 .swagger-ui .opblock-tag {
@@ -384,8 +384,8 @@ html[data-theme='dark'] .swagger-ui .model-toggle:after {
 
 .swagger-ui input[disabled], .swagger-ui select[disabled], .swagger-ui textarea[disabled],
 .swagger-ui .parameters-col_description input[type=text] {
-    background: var(--sushi-bg-4) !important;
-    border-color: var(--sushi-border) !important;
+    background: var(--manifold-bg-4) !important;
+    border-color: var(--manifold-border) !important;
 }
 
 .swagger-ui table tbody tr td,
@@ -395,16 +395,16 @@ html[data-theme='dark'] .swagger-ui .model-toggle:after {
 }
 
 .swagger-ui .btn {
-    color: var(--sushi-title) !important;
+    color: var(--manifold-title) !important;
 }
 
 .swagger-ui .btn:not(.cancel) {
-    border-color: var(--sushi-border) !important;
+    border-color: var(--manifold-border) !important;
 }
 
 .swagger-ui .btn.execute {
-    background: var(--sushi-common-button) !important;
-    color: var(--sushi-common-title) !important;
+    background: var(--manifold-common-button) !important;
+    color: var(--manifold-common-title) !important;
     border: none;
 }
 /* swagger END */
@@ -472,7 +472,7 @@ html[data-theme='dark'] .swagger-ui .model-toggle:after {
     .warning-swagger {
         display: block;
         text-align: center;
-        border: 1px solid var(--sushi-border);
+        border: 1px solid var(--manifold-border);
         border-radius: 16px;
         padding: 16px;
     }
