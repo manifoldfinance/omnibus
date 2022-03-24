@@ -5,11 +5,12 @@ hide_title: false
 hide_table_of_contents: false
 sidebar_label: Introduction
 sidebar_position: 1
-pagination_label: Markdown features
-description: Index Page
+pagination_label: Manifold Finance Platform Overview
+description: Overview Introduction
 keywords:
   - docs
-  - docusaurus
+  - overview
+  - platform
 ---
 
 # Introduction
