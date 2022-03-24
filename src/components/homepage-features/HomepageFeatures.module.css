@@ -66,28 +66,28 @@ html[data-theme='light'] .featureCard {
     transform: scale(0.5) translate(-160px, -86px);
 }
 
-.onsenImage::after {
-    content: url("../../../static/img/partyonsen.png");
+.defiTokens::after {
+    content: url("../../../static/img/defi_tokens.png");
 }
 
-html[data-theme='light'] .onsenImage::after {
-    content: url("../../../static/img/partyonsen.png");
+html[data-theme='light'] .defiTokens::after {
+    content: url("../../../static/img/defi_tokens.png");
 }
 
-.sushipartyImage::after {
-    content: url("../../../static/img/miso-logo.png");
+.exploreEthereum::after {
+    content: url("../../../static/img/scion.png");
 }
 
-html[data-theme='light'] .sushipartyImage::after {
-    content: url("../../../static/img/miso-logo.png");
+html[data-theme='light'] .exploreEthereum::after {
+    content: url("../../../static/img/scion.png");
 }
 
-.sushipartyImage::after {
-    content: url("../../../static/img/miso-logo.png");
+.exploreEthereum::after {
+    content: url("../../../static/img/scion.png");
 }
 
-html[data-theme='light'] .sushipartyImage::after {
-    content: url("../../../static/img/miso-logo.png");
+html[data-theme='light'] .exploreEthereum::after {
+    content: url("../../../static/img/scion.png");
 }
 
 .spotPriceAggregatorImage::after {

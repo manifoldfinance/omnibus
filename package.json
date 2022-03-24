@@ -5,6 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
+    "format": "npx prettier --config .prettierrc.js --write '**/*.{js,md,json,yml,yaml,ts,tsx,md,mdx}'",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -33,7 +34,9 @@
     "redoc": "^2.0.0-rc.57",
     "remark-gfm": "^3.0.1",
     "swagger-ui-react": "^3.52.5",
-    "url-loader": "^4.1.1"
+    "url-loader": "^4.1.1",
+    "rehype-katex": "^4.0.0",
+    "remark-math": "3.0.1"
   },
   "browserslist": {
     "production": [
@@ -55,6 +58,7 @@
     "@types/node": "^14",
     "@types/react": "^17.0.41",
     "@types/react-dom": "^17.0.14",
-    "prettier": "^2.5.1"
+    "prettier": "^2.6.0",
+    "typescript": "^4.6.2"
   }
 }

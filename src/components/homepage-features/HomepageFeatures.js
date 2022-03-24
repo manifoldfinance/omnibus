@@ -8,8 +8,8 @@ const FeatureList = [
   {
     title: 'OpenMEV',
     description:
-      'OpenMEV aims to bring new liquidity to SushiSwap, decrease slippage, expand our pool offerings, and foster exciting synergistic partnerships with other DeFi projects.',
-    image: <div className={clsx(styles.featureCardImage, styles.onsenImage)} />,
+      'OpenMEV  enables protocols to recapture arbitrage opportunities and liquidity by offering a percentage of the protocols harvest upfront, today.',
+    image: <div className={clsx(styles.featureCardImage, styles.defiTokens)} />,
     links: [
       {
         title: 'Introduction',
@@ -35,9 +35,9 @@ const FeatureList = [
     ],
   },
   {
-    title: 'OpenMEV',
+    title: 'ETH Staking',
     description:
-      'OpenMEV is a decentralized protocol that incentives liquidity and liquidity rebates for protocols and liquidity.',
+      'The most liquid ETH2 Staking Pool with the highest APY.',
     image: (
       <div
         className={clsx(
@@ -49,14 +49,14 @@ const FeatureList = [
     links: [
       {
         title: 'Overview',
-        href: '/docs/bentobox/introduction',
+        href: '#',
       },
       {
-        title: 'Concepts',
-        href: '/docs/bentobox/concepts',
+        title: 'Infrastructure',
+        href: '#',
       },
       {
-        title: 'Connecting and usage',
+        title: 'Risk Management',
         href: '#',
       },
       {
@@ -69,9 +69,9 @@ const FeatureList = [
   {
     title: 'Fold Vaults',
     description:
-      'Fold Vaults is a protocol that incentivizes liquidity and liquidity rebates for protocols and liquidity.',
+      'Fold Vaults enable lending and borrowing of ETH and ERC20 tokens.',
     image: (
-      <div className={clsx(styles.featureCardImage, styles.sushipartyImage)} />
+      <div className={clsx(styles.featureCardImage, styles.exploreEthereum)} />
     ),
     links: [
       {
@@ -83,7 +83,7 @@ const FeatureList = [
         href: '#',
       },
       {
-        title: 'Contract APIs',
+        title: 'Lending',
         href: '#',
       },
     ],
@@ -113,7 +113,7 @@ function Feature({ title, description, image, links }) {
                   <span>{link.title}</span>
                   {link.isSwagger && (
                     <span className={styles.featureCardLinkSwagger}>
-                      Swagger
+                      API Spec
                     </span>
                   )}
                   {link.versionLabel && (

@@ -55,7 +55,7 @@ jobs:
         id: install
         run: |
           yarn install
-          
+
       - name: Build
         id: build
         run: |
