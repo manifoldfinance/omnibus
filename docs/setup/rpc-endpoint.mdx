@@ -11,7 +11,7 @@ For advanced users, you can interact with the relay's RPC endpoint at `relay.fla
 ### eth_sendBundle
 `ethSendBundle` can be used to send your bundles to the relay. The `eth_sendBundle` RPC has the following payload format:
 
-```json
+```jsonc
 {
   "jsonrpc": "2.0",
   "id": 1,
@@ -29,7 +29,7 @@ For advanced users, you can interact with the relay's RPC endpoint at `relay.fla
 ```
 
 example:
-```json
+```jsonc
 {
   "jsonrpc": "2.0",
   "id": 1,
@@ -39,7 +39,7 @@ example:
 ```
 
 example response:
-```json
+```jsonc
 {
   "jsonrpc": "2.0",
   "id": "123",
@@ -52,7 +52,7 @@ example response:
 ### eth_callBundle
 `eth_callBundle` can be used to simulate a bundle against a specific block number, including simulating a bundle at the top of the next block. The `eth_callBundle` RPC has the following payload format:
 
-```json
+```jsonc
 {
   "jsonrpc": "2.0",
   "id": 1,
@@ -69,7 +69,7 @@ example response:
 ```
 
 example:
-```json
+```jsonc
 {
   "jsonrpc": "2.0",
   "id": 1,
@@ -79,7 +79,7 @@ example:
 ```
 
 example response:
-```json
+```jsonc
 {
   "jsonrpc": "2.0",
   "id": "123",
@@ -123,7 +123,7 @@ example response:
 
 The `flashbots_getUserStats` JSON-RPC method returns a quick summary of how a searcher is performing in the relay, including their [reputation-based priority](/flashbots-auction/searchers/advanced/reputation). It is currently updated once every hour and has the following payload format:
 
-```json
+```jsonc
 {
   "jsonrpc": "2.0",
   "id": 1,
@@ -135,7 +135,7 @@ The `flashbots_getUserStats` JSON-RPC method returns a quick summary of how a se
 ```
 
 example response:
-```json
+```jsonc
 {
   "is_high_priority": true,
   "all_time_miner_payments": "1280749594841588639",
@@ -155,7 +155,7 @@ where
 
 The `flashbots_getBundleStats` JSON-RPC method returns stats for a single bundle. You must provide a blockNumber and the bundleHash, and the signing address must be the same as the one who submitted the bundle.
 
-```json
+```jsonc
 {
   "jsonrpc": "2.0",
   "id": 1,
@@ -170,7 +170,7 @@ The `flashbots_getBundleStats` JSON-RPC method returns stats for a single bundle
 ```
 
 example response:
-```json
+```jsonc
 {
   "isSimulated": true,
   "isSentToMiners": true,
@@ -185,7 +185,7 @@ example response:
 
 To authenticate your request, the relay requires you sign the payload and include the signed payload in the `X-Flashbots-Signature` header of your request.
 
-```curl
+```shell
 curl -X POST -H "Content-Type: application/json" -H "X-Flashbots-Signature: 0x1234:0xabcd" --data '{"jsonrpc":"2.0","method":"eth_sendBundle","params":[{see above}],"id":1}' https://relay.flashbots.net
 ```
 
