@@ -7,8 +7,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Manifold Finance',
-  tagline: 'Manifold Finance Engineering Documentation',
-  url: 'https://engineering.manifoldfinance.com',
+  tagline: 'Manifold Finance Knowledgebase',
+  url: 'https://docs.manifoldfinance.com',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -55,15 +55,15 @@ const config = {
             position: 'left',
             items: [
               {
-                label: 'Yield Farming and Strategies',
+                label: 'FOLD Overview',
                 href: '#',
               },
               {
-                label: 'Limit order protocol',
+                label: 'ETH2 Staking',
                 href: '#',
               },
               {
-                label: 'MasterChef v2',
+                label: 'OpenMEV',
                 href: '#',
               },
             ],
@@ -73,23 +73,23 @@ const config = {
             position: 'left',
             items: [
               {
-                label: 'Sushiswap',
+                label: 'FOLD Staking',
                 href: '#',
               },
               {
-                label: 'MasterChef',
+                label: 'FOLD Valuts',
                 href: '#',
               },
               {
-                label: 'Trident',
+                label: 'FOLD Markets',
                 href: '#',
               },
               {
-                label: 'BentoVault',
+                label: 'OpenMEV',
                 href: '#',
               },
               {
-                label: 'Miso Launchpad',
+                label: 'FOLD Governance',
                 href: '#',
               },
             ],
