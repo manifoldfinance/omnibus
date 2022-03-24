@@ -67,27 +67,27 @@ html[data-theme='light'] .featureCard {
 }
 
 .defiTokens::after {
-    content: url("../../../static/img/defi_tokens.png");
+    content: url("../../../static/img/ethereum_computer.png");
 }
 
 html[data-theme='light'] .defiTokens::after {
-    content: url("../../../static/img/defi_tokens.png");
+    content: url("../../../static/img/ethereum_computer.png");
 }
 
 .exploreEthereum::after {
-    content: url("../../../static/img/scion.png");
+    content: url("../../../static/img/defi_stairs.png");
 }
 
 html[data-theme='light'] .exploreEthereum::after {
-    content: url("../../../static/img/scion.png");
+    content: url("../../../static/img/defi_stairs.png");
 }
 
 .exploreEthereum::after {
-    content: url("../../../static/img/scion.png");
+    content: url("../../../static/img/defi_stairs.png");
 }
 
 html[data-theme='light'] .exploreEthereum::after {
-    content: url("../../../static/img/scion.png");
+    content: url("../../../static/img/defi_stairs.png");
 }
 
 .spotPriceAggregatorImage::after {
