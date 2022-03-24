@@ -66,6 +66,7 @@ const config = {
         items: [
           {
             label: 'Guidebook',
+            href: '/index',
             position: 'left',
             items: [
               {
