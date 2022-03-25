@@ -1,16 +1,13 @@
 name: lighthouse
 
-on:
-  pull_request_target:
-    branches:
-      - master
+on: [pull_request]
 
 jobs:
   lighthouse-report:
     name: Lighthouse Report
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - name: Wait for the Netlify Preview
         uses: jakepartusch/wait-for-netlify-action@v1
         id: netlify
