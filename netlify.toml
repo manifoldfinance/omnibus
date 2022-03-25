@@ -14,12 +14,7 @@
     pretty_urls = true
   [build.processing.images]
     compress = true
-    
 
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 200
 
  [headers]
 # Define which paths this specific [[headers]] block will cover.

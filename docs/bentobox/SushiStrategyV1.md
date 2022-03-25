@@ -95,8 +95,8 @@ Send the assets to the Strategy and call skim to invest them.
 function transferOwnership(address newOwner, bool direct, bool renounce) external nonpayable
 ```
 
-Transfers ownership to `newOwner`. Either directly or claimable by the new
-pending owner. Can only be invoked by the current `owner`.
+Transfers ownership to `newOwner`. Either directly or claimable by the new pending owner. Can only be invoked by the
+current `owner`.
 
 #### Parameters
 
@@ -112,11 +112,10 @@ pending owner. Can only be invoked by the current `owner`.
 function withdraw(uint256 amount) external nonpayable returns (uint256 actualAmount)
 ```
 
-Withdraw assets. The returned amount can differ from the requested amount due to
-rounding.
+Withdraw assets. The returned amount can differ from the requested amount due to rounding.
 
-_The `actualAmount` should be very close to the amount. The difference should
-NOT be used to report a loss. That&#39;s what harvest is for._
+_The `actualAmount` should be very close to the amount. The difference should NOT be used to report a loss. That&#39;s
+what harvest is for._
 
 #### Parameters
 

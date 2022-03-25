@@ -37,7 +37,7 @@ const config = {
           editUrl: 'https://github.com/manifoldfinance/omnibus/edit/master/',
      //     remarkPlugins: [math],
      //     rehypePlugins: [katex],
-          routeBasePath: '/',
+     //     routeBasePath: '/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
