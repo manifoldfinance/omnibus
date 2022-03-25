@@ -9,7 +9,7 @@ const FeatureList = [
     title: 'OpenMEV',
     description:
       'OpenMEV  enables protocols to recapture arbitrage opportunities and liquidity by offering a percentage of the protocols harvest upfront, today.',
-    image: <div className={clsx(styles.featureCardImage, styles.defiTokens)} />,
+    image: <div className={clsx(styles.featureCardImage, styles.eth-infra)} />,
     links: [
       {
         title: 'Introduction',
@@ -42,7 +42,7 @@ const FeatureList = [
       <div
         className={clsx(
           styles.featureCardImage,
-          styles.spotPriceAggregatorImage,
+          styles.eth-discover,
         )}
       />
     ),

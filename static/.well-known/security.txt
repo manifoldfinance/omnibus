@@ -1,0 +1,11 @@
+ # Our security address
+ Contact: mailto:ops@manifoldfinance.com
+ # Our OpenPGP key
+ Encryption: https://raw.githubusercontent.com/manifoldfinance/pki/master/7CC9FFB1.asc
+ # Our security policy
+ Policy: https://github.com/manifoldfinance/security, https://manifoldfinance.com/policies/security.html
+ # Our security acknowledgments page
+ Acknowledgments: https://github.com/manifoldfinance/security
+ Preferred-Languages: en
+ Canonical: https://manifoldfinance.com/.well-known/security.txt
+ Expires: 2022-12-24T22:29:57:z
