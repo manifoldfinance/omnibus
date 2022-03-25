@@ -136,9 +136,8 @@ const config = {
         apiKey: '54131dd15a05faf7104740c9907da3fd',
         indexName: 'docs-manifold',
         contextualSearch: true,
-        appId: 'CEKAQ7PWEX',
-        searchParameters: {},
-        facetFilters: [],
+        searchPagePath: 'search',
+        appId: 'CEKAQ7PWEX'
       },
       prism: {
         theme: lightCodeTheme,
