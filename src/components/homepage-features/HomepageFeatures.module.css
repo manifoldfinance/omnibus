@@ -67,35 +67,35 @@ html[data-theme='light'] .featureCard {
 }
 
 .defiTokens::after {
-    content: url("../../../static/img/ethereum_computer.png");
+    content: url("../../../static/img/eth-infra.png");
 }
 
 html[data-theme='light'] .defiTokens::after {
-    content: url("../../../static/img/ethereum_computer.png");
+    content: url("../../../static/img/eth-infra.png");
 }
 
 .exploreEthereum::after {
-    content: url("../../../static/img/defi_stairs.png");
+    content: url("../../../static/img/eth-future.png");
 }
 
 html[data-theme='light'] .exploreEthereum::after {
-    content: url("../../../static/img/defi_stairs.png");
+    content: url("../../../static/img/eth-future.png");
 }
 
 .exploreEthereum::after {
-    content: url("../../../static/img/defi_stairs.png");
+    content: url("../../../static/img/eth-future.png");
 }
 
 html[data-theme='light'] .exploreEthereum::after {
-    content: url("../../../static/img/defi_stairs.png");
+    content: url("../../../static/img/eth-future.png");
 }
 
 .spotPriceAggregatorImage::after {
-    content: url("../../../static/img/bentobox/bentoparty.png");
+    content: url("../../../static/img/eth-discover.png");
 }
 
 html[data-theme='light'] .spotPriceAggregatorImage::after {
-    content: url("../../../static/img/bentobox/bentoparty.png");
+    content: url("../../../static/img/eth-discover.png");
 }
 
 

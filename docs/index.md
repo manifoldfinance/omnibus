@@ -6,8 +6,9 @@ type: docs
 
 # Omnibus: Manifold Finance Platform Hub
 
-Governance, Development and Community resources. This will take you the appropriate resource / information. Cant find what you are looking for? [Open an issue on GitHub](https://github.com/manifoldfinance/omnibus/issues) or [Ask a question on our forums](https://forums.manifoldfinance.com) 
-
+Governance, Development and Community resources. This will take you the appropriate resource / information. Cant find
+what you are looking for? [Open an issue on GitHub](https://github.com/manifoldfinance/omnibus/issues) or
+[Ask a question on our forums](https://forums.manifoldfinance.com)
 
 ## Developer Hub
 
@@ -20,12 +21,13 @@ Governance, Development and Community resources. This will take you the appropri
 
 ## Community Hub
 
-[![telegram - manifold finance](https://img.shields.io/badge/telegram-manifold_finance-blue?logo=telegram&logoColor=white)](https://t.me/manifoldfinance)  <br />
-[![twitter - @foldfinance](https://img.shields.io/static/v1?label=twitter&message=%40foldfinance&color=blue&logo=twitter&logoColor=white)](https://twitter.com/foldfinance) <br />
+[![telegram - manifold finance](https://img.shields.io/badge/telegram-manifold_finance-blue?logo=telegram&logoColor=white)](https://t.me/manifoldfinance)
+<br />
+[![twitter - @foldfinance](https://img.shields.io/static/v1?label=twitter&message=%40foldfinance&color=blue&logo=twitter&logoColor=white)](https://twitter.com/foldfinance)
+<br />
 
 ![Discord](https://img.shields.io/discord/833691260472393729?color=%237289DA&label=Manifold%20Community&logo=discord)
 ![Discourse posts](https://img.shields.io/discourse/posts?label=Community%20Forums&logo=discourse&server=https%3A%2F%2Fforums.manifoldfinance.com)
-
 
 ### Code of Conduct
 
@@ -33,30 +35,22 @@ Governance, Development and Community resources. This will take you the appropri
 
 ## Support and Help
 
-<ops@manifoldfinnace.com> - or via discord / telegram  <br />
-Never send anyone tokens/currency/money/passwords/logins/etc.   <br />
-**We will never need these things**.
-
+<ops@manifoldfinnace.com> - or via discord / telegram <br /> Never send anyone
+tokens/currency/money/passwords/logins/etc. <br /> **We will never need these things**.
 
 #### Software Defects
 
 [Full version is found here](https://github.com/manifoldfinance/.github/blob/master/SECURITY.adoc)
 
-At Manifold Finance, Inc, security is a priority. But regardless of
-how much effort we put into system security, there may still be
-vulnerabilities present. If you discover a vulnerability, we want to
-know about it so we can take steps to address it as quickly as possible.
-We would like to ask you to help us better protect our clients and our
-systems.
+At Manifold Finance, Inc, security is a priority. But regardless of how much effort we put into system security, there
+may still be vulnerabilities present. If you discover a vulnerability, we want to know about it so we can take steps to
+address it as quickly as possible. We would like to ask you to help us better protect our clients and our systems.
 
 ### Defect Response
 
-If you think you have discovered a security issue in any of the
-our projects, we’d love to hear from you. We will take all
-security bugs seriously and if confirmed upon investigation we will
-patch it within a reasonable amount of time and release a public
-security bulletin discussing the impact and credit the discoverer.
+If you think you have discovered a security issue in any of the our projects, we’d love to hear from you. We will take
+all security bugs seriously and if confirmed upon investigation we will patch it within a reasonable amount of time and
+release a public security bulletin discussing the impact and credit the discoverer.
 
-Sam Bacha <sam@manifoldfinnance.com>  <br />
-Network Operations <ops@manifoldfinance.com>  <br />
-SRE On Call <janitor@manifoldfinance.com>  <br />
+Sam Bacha <sam@manifoldfinnance.com> <br /> Network Operations <ops@manifoldfinance.com> <br /> SRE On Call
+<janitor@manifoldfinance.com> <br />

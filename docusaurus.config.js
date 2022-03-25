@@ -10,8 +10,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Manifold Finance',
   tagline: 'Manifold Finance Knowledgebase',
-  url: 'https://docs.manifoldfinance.com',
+  url: 'https://docs-manifold.netlify.app',
   baseUrl: '/',
+  trailingSlash: false,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon/favicon.ico',
@@ -37,7 +38,7 @@ const config = {
           editUrl: 'https://github.com/manifoldfinance/omnibus/edit/master/',
      //     remarkPlugins: [math],
      //     rehypePlugins: [katex],
-          routeBasePath: '/',
+     //     routeBasePath: '/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -135,9 +136,8 @@ const config = {
         apiKey: '54131dd15a05faf7104740c9907da3fd',
         indexName: 'docs-manifold',
         contextualSearch: true,
-        appId: 'CEKAQ7PWEX',
-        searchParameters: {},
-        facetFilters: [],
+        searchPagePath: 'search',
+        appId: 'CEKAQ7PWEX'
       },
       prism: {
         theme: lightCodeTheme,

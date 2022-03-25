@@ -18,8 +18,7 @@ keywords:
 
 # Concepts and Formalization
 
-If you'd like to familiarize yourself with Manifold's core concepts, we
-recommend reading up on our core concepts:
+If you'd like to familiarize yourself with Manifold's core concepts, we recommend reading up on our core concepts:
 
 ## Sections
 

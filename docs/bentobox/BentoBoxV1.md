@@ -4,9 +4,8 @@ _BoringCrypto, Keno_
 
 > BentoBox
 
-The BentoBox is a vault for tokens. The stored tokens can be flash loaned and
-used in strategies. Yield from this will go to the token depositors. Rebasing
-tokens ARE NOT supported and WILL cause loss of funds. Any funds transferred
+The BentoBox is a vault for tokens. The stored tokens can be flash loaned and used in strategies. Yield from this will
+go to the token depositors. Rebasing tokens ARE NOT supported and WILL cause loss of funds. Any funds transferred
 directly onto the BentoBox will be lost, use the deposit function instead.
 
 ## Methods
@@ -70,8 +69,7 @@ Allows batched call to self (this contract).
 function batchFlashLoan(contract IBatchFlashBorrower borrower, address[] receivers, contract IERC20[] tokens, uint256[] amounts, bytes data) external nonpayable
 ```
 
-Support for batched flashloans. Useful to request multiple different `tokens` in
-a single transaction.
+Support for batched flashloans. Useful to request multiple different `tokens` in a single transaction.
 
 #### Parameters
 
@@ -97,8 +95,8 @@ Needs to be called by `pendingOwner` to claim ownership.
 function deploy(address masterContract, bytes data, bool useCreate2) external payable returns (address cloneAddress)
 ```
 
-Deploys a given master Contract as a clone. Any ETH transferred with this call
-is forwarded to the new clone. Emits `LogDeploy`.
+Deploys a given master Contract as a clone. Any ETH transferred with this call is forwarded to the new clone. Emits
+`LogDeploy`.
 
 #### Parameters
 
@@ -163,9 +161,8 @@ Flashloan ability.
 function harvest(contract IERC20 token, bool balance, uint256 maxChangeAmount) external nonpayable
 ```
 
-The actual process of yield farming. Executes the strategy of `token`.
-Optionally does housekeeping if `balance` is true. `maxChangeAmount` is relevant
-for skimming or withdrawing if `balance` is true.
+The actual process of yield farming. Executes the strategy of `token`. Optionally does housekeeping if `balance` is
+true. `maxChangeAmount` is relevant for skimming or withdrawing if `balance` is true.
 
 #### Parameters
 
@@ -305,8 +302,7 @@ Call wrapper that performs `ERC20.permit` on `token`. Lookup `IERC20.permit`.
 function registerProtocol() external nonpayable
 ```
 
-Other contracts need to register with this master contract so that users can
-approve them for the BentoBox.
+Other contracts need to register with this master contract so that users can approve them for the BentoBox.
 
 ### setMasterContractApproval
 
@@ -333,9 +329,8 @@ Approves or revokes a `masterContract` access to `user` funds.
 function setStrategy(contract IERC20 token, contract IStrategy newStrategy) external nonpayable
 ```
 
-Sets the contract address of a new strategy that conforms to `IStrategy` for
-`token`. Must be called twice with the same arguments. A new strategy becomes
-pending first and can be activated once `STRATEGY_DELAY` is over.
+Sets the contract address of a new strategy that conforms to `IStrategy` for `token`. Must be called twice with the same
+arguments. A new strategy becomes pending first and can be activated once `STRATEGY_DELAY` is over.
 
 _Only the owner of this contract is allowed to change this._
 
@@ -504,8 +499,8 @@ Transfer shares from a user account to multiple other ones.
 function transferOwnership(address newOwner, bool direct, bool renounce) external nonpayable
 ```
 
-Transfers ownership to `newOwner`. Either directly or claimable by the new
-pending owner. Can only be invoked by the current `owner`.
+Transfers ownership to `newOwner`. Either directly or claimable by the new pending owner. Can only be invoked by the
+current `owner`.
 
 #### Parameters
 
