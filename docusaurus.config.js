@@ -1,9 +1,11 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 
+//const math = require('remark-math');
+//const katex = require('rehype-katex');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+// /** @type {import('@docusaurus/types').DocusaurusConfig} */
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Manifold Finance',
@@ -15,6 +17,15 @@ const config = {
   favicon: 'img/favicon/favicon.ico',
   organizationName: 'manifoldfinance', // Usually your GitHub org/user name.
   projectName: 'omnibus', // Usually your repo name.
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X',
+      crossorigin: 'anonymous',
+    },
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -24,6 +35,9 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/manifoldfinance/omnibus/edit/master/',
+     //     remarkPlugins: [math],
+     //     rehypePlugins: [katex],
+          routeBasePath: '/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -52,11 +66,12 @@ const config = {
         items: [
           {
             label: 'Guidebook',
+            href: '/index',
             position: 'left',
             items: [
               {
-                label: 'FOLD Overview',
-                href: '#',
+                label: 'Platform Overview',
+                href: '/overview/platform',
               },
               {
                 label: 'ETH2 Staking',
@@ -77,7 +92,7 @@ const config = {
                 href: '#',
               },
               {
-                label: 'FOLD Valuts',
+                label: 'FOLD Vaults',
                 href: '#',
               },
               {
@@ -117,17 +132,19 @@ const config = {
         ],
       },
       algolia: {
-        apiKey: 'b6b058ad8567fd68f16ec803fefef589',
-        indexName: 'sushiswap',
+        apiKey: '54131dd15a05faf7104740c9907da3fd',
+        indexName: 'docs-manifold',
         contextualSearch: true,
-        appId: 'XOPRM3IJU6',
+        appId: 'CEKAQ7PWEX',
         searchParameters: {},
         facetFilters: [],
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+ //       additionalLanguages: ['solidity']
       },
+      hideableSidebar: true,
     },
 };
 
