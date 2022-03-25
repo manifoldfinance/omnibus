@@ -1,5 +1,5 @@
 import Head from '@docusaurus/core/lib/client/exports/Head';
-import HomePageBackgroundImage from '../../static/img/_bg.svg';
+//import HomePageBackgroundImage from '../../static/img/_bg.svg';
 import HomepageDeveloperLinks from '../components/homepage-developer-links/HomepageDeveloperLinks';
 import HomepageFeatures from '../components/homepage-features/HomepageFeatures';
 import HomepageFooter from '../components/homepage-footer/HomepageFooter';

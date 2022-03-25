@@ -10,8 +10,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Manifold Finance',
   tagline: 'Manifold Finance Knowledgebase',
-  url: 'https://docs.manifoldfinance.com',
+  url: 'https://docs-manifold.netlify.app',
   baseUrl: '/',
+  trailingSlash: false,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon/favicon.ico',
