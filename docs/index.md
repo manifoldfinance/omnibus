@@ -12,22 +12,23 @@ what you are looking for? [Open an issue on GitHub](https://github.com/manifoldf
 
 ## Developer Hub
 
-- [VSCode Extensions](https://github.com/manifoldfinance/vscode-recommendations) Curated list
-- [@openmev/sdk](https://github.com/manifoldfinance/openmev-sdk) Well-typed Nodejs SDK
-- [Docker Hub](https://github.com/openmev/docker-hub)
+🚧 We are migrating our toolin/sdk's
+
+- [libmev](https://github.com/manifoldfinance/libmev) Libmev, connectivity/platform sdk in functional typescript
+- [libdisco](https://github.com/manifoldfinance/libdisco) Libdisco, Protocol/DApp Integration SDK, in functional typescript
+- [@openmev/sdk](https://github.com/manifoldfinance/openmev-sdk) Generated Clients, Kotlin/Golang/Python
+
+### Analysis Libraries
+
+> kdb+
+
 - [qAbiEncoder](https://github.com/manifoldfinance/qAbiEncode) C Library for q/kdb+ to process EVM ABI
 - [qBig Integer](https://github.com/manifoldfinance/qBigInt) Library for big integer support for q/kdb+
 - [qQuarticRoots](https://github.com/manifoldfinance/qQuarticRoots)
 
 ## Community Hub
 
-[![telegram - manifold finance](https://img.shields.io/badge/telegram-manifold_finance-blue?logo=telegram&logoColor=white)](https://t.me/manifoldfinance)
-<br />
-[![twitter - @foldfinance](https://img.shields.io/static/v1?label=twitter&message=%40foldfinance&color=blue&logo=twitter&logoColor=white)](https://twitter.com/foldfinance)
-<br />
-
-![Discord](https://img.shields.io/discord/833691260472393729?color=%237289DA&label=Manifold%20Community&logo=discord)
-![Discourse posts](https://img.shields.io/discourse/posts?label=Community%20Forums&logo=discourse&server=https%3A%2F%2Fforums.manifoldfinance.com)
+[![telegram - manifold finance](https://img.shields.io/badge/telegram-manifold_finance-blue?logo=telegram&logoColor=white)](https://t.me/manifoldfinance) [![twitter - @foldfinance](https://img.shields.io/static/v1?label=twitter&message=%40foldfinance&color=blue&logo=twitter&logoColor=white)](https://twitter.com/foldfinance) ![Discord](https://img.shields.io/discord/833691260472393729?color=%237289DA&label=Manifold%20Community&logo=discord) ![Discourse posts](https://img.shields.io/discourse/posts?label=Community%20Forums&logo=discourse&server=https%3A%2F%2Fforums.manifoldfinance.com)
 
 ### Code of Conduct
 
@@ -35,8 +36,9 @@ what you are looking for? [Open an issue on GitHub](https://github.com/manifoldf
 
 ## Support and Help
 
-<ops@manifoldfinnace.com> - or via discord / telegram <br /> Never send anyone
-tokens/currency/money/passwords/logins/etc. <br /> **We will never need these things**.
+<ops@manifoldfinnace.com> - 
+[manifoldfinance/support](https://github.com/manifoldfinance/support)
+<br /> Never send anyone tokens/currency/money/passwords/logins/etc. <br /> **We will never need these things**.
 
 #### Software Defects
 
