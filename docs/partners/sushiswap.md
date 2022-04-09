@@ -1,13 +1,23 @@
 ---
-title: OpenMEV Transaction Status API Specification
-version: 0.1.0
-date: 2022.04.06
+id: doc-setup
+title: Manifold Finance
+hide_title: false
+hide_table_of_contents: false
+sidebar_label: Sushiswap
+sidebar_position: 1
+pagination_label: LibSushi
+description: SushiGuard Library
+keywords:
+  - setup
+  - install
+  - libsushi
+  - sushiswap
+  - sushi guard
 ---
 
-# OpenMEV Transaction API
+# [libsushi](#)
 
-Transactions that you submit to OpenMEV won't be observable in the public mempool. You can still check on the status of
-your submitted transaction via our API detailed below.
+> OpenMEV Library for SushiSwap's SushiGuard
 
 ## Potential statuses
 
@@ -16,33 +26,6 @@ your submitted transaction via our API detailed below.
 - `FAILED` - The transaction was submitted for 25 blocks and failed to be included on-chain
 - `CANCELLED` - The transaction was cancelled by the user and not included on-chain
 - `UNKNOWN` - The transaction was not received
-
-## Privacy
-
-In order to receive a response from the status API you must provide a valid transaction hash to look up.
-
-## Response Message
-
-OpenMEV Status API is flashbots compatible, meaning it covers at least version 0.6+ of Flashbots API.
-
-To check the status of your transactions query the OpenMEV API Endpoint. Response messages are formatted as follows:
-
-```json
-{
-  "status": "PENDING",
-  "hash": "YOUR_TX_HASH",
-  "maxBlockNumber": "latest",
-  "transaction": {
-    "from": "<SENDER>",
-    "to": "<RECEIVER>",
-    "gasLimit": "23000",
-    "maxFeePerGas": "300",
-    "maxPriorityFeePerGas": "10",
-    "nonce": "42",
-    "value": "1333333333337"
-  }
-}
-```
 
 ## Typescript Library
 

@@ -10,20 +10,10 @@ const DeveloperList = [
       title: 'Protocol Integrations',
       href: '#',
     },
-    image: (
-      <div
-        className={clsx(
-          styles.developerCardImage,
-          styles.foundationGrantProgramImage,
-        )}
-      />
-    ),
+    image: <div className={clsx(styles.developerCardImage, styles.foundationGrantProgramImage)} />,
     title: 'OpenMEV program',
     description: (
-      <>
-        Incentivize protocols and liquidity by rebates and discounts for
-        increasing volume and protocol TVL.
-      </>
+      <>Incentivize protocols and liquidity by rebates and discounts for increasing volume and protocol TVL.</>
     ),
   },
   {
@@ -31,16 +21,9 @@ const DeveloperList = [
       title: 'Deploy a strategy',
       href: '#',
     },
-    image: (
-      <div className={clsx(styles.developerCardImage, styles.bugBountyImage)} />
-    ),
+    image: <div className={clsx(styles.developerCardImage, styles.bugBountyImage)} />,
     title: 'Vault Strategies',
-    description: (
-      <>
-        Launch a new strategy today and get a percentage of the strategies
-        harvest upfront, today.
-      </>
-    ),
+    description: <>Launch a new strategy today and get a percentage of the strategies harvest upfront, today.</>,
   },
 ];
 

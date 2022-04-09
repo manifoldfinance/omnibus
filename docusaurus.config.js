@@ -22,8 +22,7 @@ const config = {
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css',
       type: 'text/css',
-      integrity:
-        'sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X',
+      integrity: 'sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X',
       crossorigin: 'anonymous',
     },
   ],
@@ -36,9 +35,9 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/manifoldfinance/omnibus/edit/master/',
-     //     remarkPlugins: [math],
-     //     rehypePlugins: [katex],
-     //     routeBasePath: '/',
+          //     remarkPlugins: [math],
+          //     rehypePlugins: [katex],
+          //     routeBasePath: '/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -137,12 +136,12 @@ const config = {
         indexName: 'docs-manifold',
         contextualSearch: true,
         searchPagePath: 'search',
-        appId: 'CEKAQ7PWEX'
+        appId: 'CEKAQ7PWEX',
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
- //       additionalLanguages: ['solidity']
+        //       additionalLanguages: ['solidity']
       },
       hideableSidebar: true,
     },
