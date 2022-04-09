@@ -24,11 +24,7 @@ export default function homepageFooter() {
           <ChevronRightImg />
         </Link>
       </div>
-      <img
-        className={styles.prefooterImage}
-        src={PreFooterData.image}
-        alt={PreFooterData.title}
-      />
+      <img className={styles.prefooterImage} src={PreFooterData.image} alt={PreFooterData.title} />
     </section>
   );
 }

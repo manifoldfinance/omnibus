@@ -115,11 +115,7 @@ export default function HomepageFooter() {
             <div className={styles.footerColumn} key={idx}>
               <span className={styles.footerColumnTitle}>{props.title}</span>
               {props.links.map((linkProps, index) => (
-                <Link
-                  key={index}
-                  className={styles.footerColumnLink}
-                  to={linkProps.link}
-                >
+                <Link key={index} className={styles.footerColumnLink} to={linkProps.link}>
                   {linkProps.title}
                 </Link>
               ))}
@@ -128,23 +124,14 @@ export default function HomepageFooter() {
         </div>
         <div>
           <p className={styles.footerSubscribeTitle}>Primitives Report</p>
-          <p className={styles.footerSubscribeText}>
-            Listings, events, and more
-          </p>
-          <Link
-            to="https://manifoldfinance.github.io/primitives/"
-            className={styles.footerSubscribeButton}
-          >
+          <p className={styles.footerSubscribeText}>Listings, events, and more</p>
+          <Link to="https://manifoldfinance.github.io/primitives/" className={styles.footerSubscribeButton}>
             <span className={styles.footerSubscribeButtonText}>Subscribe</span>
             <ChevronRightImg />
           </Link>
           <div className={styles.socialMediaWrap}>
             {FooterLinks.socialMedia.map((media, idx) => (
-              <Link
-                className={styles.socialMediaLink}
-                to={media.href}
-                key={idx}
-              >
+              <Link className={styles.socialMediaLink} to={media.href} key={idx}>
                 {media.image}
               </Link>
             ))}
@@ -154,15 +141,9 @@ export default function HomepageFooter() {
       <div className={clsx('page-container', styles.afterFooter)}>
         <div className={styles.footerLogoContainer}>
           <FooterLogoImage className={styles.footerLogo} />
-          <span>
-            &#169; {new Date().getFullYear()} Manifold Finance, Inc - All Rights
-            Reserved{' '}
-          </span>
+          <span>&#169; {new Date().getFullYear()} Manifold Finance, Inc - All Rights Reserved </span>
         </div>
-        <a
-          href="https://etherscan.io/address/0xd084944d3c05cd115c09d072b9f44ba3e0e45921"
-          target="_blank"
-        >
+        <a href="https://etherscan.io/address/0xd084944d3c05cd115c09d072b9f44ba3e0e45921" target="_blank">
           FOLDv1
         </a>
         <a href="" target="_blank">

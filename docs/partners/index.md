@@ -15,17 +15,13 @@ keywords:
   - tutorial
 ---
 
-# Introduction
+# Partners
 
-If you'd like to familiarize yourself with Manifold's core concepts, we recommend reading up on our core concepts:
+Manifold Finance partners with both large and small protocols, engineers, designers and contributors. Our primary focus
+is on EVM-based blockchain networks.
 
-{{< jump "/docs/overview/concepts" >}}
+## List
 
-If you feel comfortable with the concepts, we recommend our quickstart guide, which takes you through a practical
-example:
-
-{{< jump "/docs/setup/quickstart" >}}
-
-## Sections
-
-{{< sections >}}
+- Sushiswap
+  - SushiGuard
+    - libsushi

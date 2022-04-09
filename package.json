@@ -1,6 +1,6 @@
 {
   "name": "manifold-omnibus",
-  "version": "0.0.5",
+  "version": "0.4.1",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -32,6 +32,7 @@
     "react": "^17",
     "react-dom": "^17",
     "redoc": "^2.0.0-rc.57",
+    "redocusaurus": "^1.0.1",
     "rehype-katex": "^4",
     "remark-gfm": "^3.0.1",
     "remark-math": "^3",
@@ -54,8 +55,8 @@
     ]
   },
   "devDependencies": {
-    "@svgr/webpack": "^5.5.0",
     "@babel/runtime": "^7.17.8",
+    "@svgr/webpack": "^5.5.0",
     "@types/node": "^14",
     "@types/react": "^17.0.41",
     "@types/react-dom": "^17.0.14",

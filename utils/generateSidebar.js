@@ -65,10 +65,7 @@ function generateSidebar({ baseDir, sourceDir, ignoreDirectories = '' }) {
         let sortOrder;
 
         if (introItem) {
-          const contents = fs.readFileSync(
-            path.join(searchIn, `${introItem}.md`),
-            'utf8',
-          );
+          const contents = fs.readFileSync(path.join(searchIn, `${introItem}.md`), 'utf8');
 
           label = findInFrontMatter(contents, 'sidebar_category');
           sortOrder = findInFrontMatter(contents, 'sidebar_category_order');

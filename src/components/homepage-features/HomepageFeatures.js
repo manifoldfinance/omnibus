@@ -36,16 +36,8 @@ const FeatureList = [
   },
   {
     title: 'ETH Staking',
-    description:
-      'The most liquid ETH2 Staking Pool with the highest APY.',
-    image: (
-      <div
-        className={clsx(
-          styles.featureCardImage,
-          styles.spotPriceAggregatorImage,
-        )}
-      />
-    ),
+    description: 'The most liquid ETH2 Staking Pool with the highest APY.',
+    image: <div className={clsx(styles.featureCardImage, styles.spotPriceAggregatorImage)} />,
     links: [
       {
         title: 'Overview',
@@ -68,11 +60,8 @@ const FeatureList = [
   },
   {
     title: 'Fold Vaults',
-    description:
-      'Fold Vaults enable lending and borrowing of ETH and ERC20 tokens.',
-    image: (
-      <div className={clsx(styles.featureCardImage, styles.exploreEthereum)} />
-    ),
+    description: 'Fold Vaults enable lending and borrowing of ETH and ERC20 tokens.',
+    image: <div className={clsx(styles.featureCardImage, styles.exploreEthereum)} />,
     links: [
       {
         title: 'Introduction',
@@ -104,23 +93,11 @@ function Feature({ title, description, image, links }) {
         {links.map((link, index) => {
           if (link.title) {
             return (
-              <Link
-                href={link.href}
-                className={styles.featureCardLinkWrap}
-                key={index}
-              >
+              <Link href={link.href} className={styles.featureCardLinkWrap} key={index}>
                 <p className={styles.featureCardLinkTitle}>
                   <span>{link.title}</span>
-                  {link.isSwagger && (
-                    <span className={styles.featureCardLinkSwagger}>
-                      API Spec
-                    </span>
-                  )}
-                  {link.versionLabel && (
-                    <span className={styles.featureCardLinkVersionLabel}>
-                      {link.versionLabel}
-                    </span>
-                  )}
+                  {link.isSwagger && <span className={styles.featureCardLinkSwagger}>API Spec</span>}
+                  {link.versionLabel && <span className={styles.featureCardLinkVersionLabel}>{link.versionLabel}</span>}
                 </p>
                 <ArrowOutside className={styles.featureCardLinkIcon} />
               </Link>
