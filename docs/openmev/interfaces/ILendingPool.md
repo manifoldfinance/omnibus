@@ -1,8 +1,8 @@
----
-description: ILendingPool
----
+# ILendingPool
 
-# ILendingPool.sol
+
+
+
 
 
 
@@ -12,17 +12,13 @@ description: ILendingPool
 
 ### flashLoan
 
-
-
-```solidity title="Solidity"
+```solidity
 function flashLoan(address receiverAddress, address[] assets, uint256[] amounts, uint256[] modes, address onBehalfOf, bytes params, uint16 referralCode) external nonpayable
 ```
 
 
-:::note Details
-Allows smartcontracts to access the liquidity of the pool within one transaction, as long as the amount taken plus a fee is returned. IMPORTANT There are security concerns for developers of flashloan receiver contracts that must be kept into consideration. For further details please visit https://developers.aave.com
-:::
 
+*Allows smartcontracts to access the liquidity of the pool within one transaction, as long as the amount taken plus a fee is returned. IMPORTANT There are security concerns for developers of flashloan receiver contracts that must be kept into consideration. For further details please visit https://developers.aave.com*
 
 #### Parameters
 
@@ -38,11 +34,10 @@ Allows smartcontracts to access the liquidity of the pool within one transaction
 
 ### getReservesList
 
-
-
-```solidity title="Solidity"
+```solidity
 function getReservesList() external view returns (address[])
 ```
+
 
 
 
@@ -54,34 +49,6 @@ function getReservesList() external view returns (address[])
 |---|---|---|
 | _0 | address[] | undefined |
 
-
-
-## Events
-
-### FlashLoan
-
-
-
-```solidity title="Solidity"
-event FlashLoan(address indexed target, address indexed initiator, address indexed asset, uint256 amount, uint256 premium, uint16 referralCode)
-```
-
-
-:::note Details
-Emitted on flashLoan()
-:::
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| target `indexed` | address | The address of the flash loan receiver contract |
-| initiator `indexed` | address | The address initiating the flash loan |
-| asset `indexed` | address | The address of the asset being flash borrowed |
-| amount  | uint256 | The amount flash borrowed |
-| premium  | uint256 | The fee flash borrowed |
-| referralCode  | uint16 | The referral code used* |
 
 
 

@@ -1,8 +1,8 @@
----
-description: IOpenMevRouter
----
+# IUniswapV2Router02
 
-# IOpenMevRouter.sol
+
+
+
 
 
 
@@ -10,25 +10,29 @@ description: IOpenMevRouter
 
 ## Methods
 
-### acceptOwnership
+### WETH9
 
-
-
-```solidity title="Solidity"
-function acceptOwnership() external nonpayable
+```solidity
+function WETH9() external pure returns (address)
 ```
 
 
 
 
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
 
 ### addLiquidity
 
-
-
-```solidity title="Solidity"
+```solidity
 function addLiquidity(address tokenA, address tokenB, uint256 amountADesired, uint256 amountBDesired, uint256 amountAMin, uint256 amountBMin, address to, uint256 deadline) external nonpayable returns (uint256 amountA, uint256 amountB, uint256 liquidity)
 ```
+
 
 
 
@@ -56,11 +60,10 @@ function addLiquidity(address tokenA, address tokenB, uint256 amountADesired, ui
 
 ### addLiquidityETH
 
-
-
-```solidity title="Solidity"
+```solidity
 function addLiquidityETH(address token, uint256 amountTokenDesired, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline) external payable returns (uint256 amountToken, uint256 amountETH, uint256 liquidity)
 ```
+
 
 
 
@@ -84,13 +87,29 @@ function addLiquidityETH(address token, uint256 amountTokenDesired, uint256 amou
 | amountETH | uint256 | undefined |
 | liquidity | uint256 | undefined |
 
+### factory
+
+```solidity
+function factory() external pure returns (address)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
 ### getAmountIn
 
-
-
-```solidity title="Solidity"
+```solidity
 function getAmountIn(uint256 amountOut, uint256 reserveIn, uint256 reserveOut) external pure returns (uint256 amountIn)
 ```
+
 
 
 
@@ -111,11 +130,10 @@ function getAmountIn(uint256 amountOut, uint256 reserveIn, uint256 reserveOut) e
 
 ### getAmountOut
 
-
-
-```solidity title="Solidity"
+```solidity
 function getAmountOut(uint256 amountIn, uint256 reserveIn, uint256 reserveOut) external pure returns (uint256 amountOut)
 ```
+
 
 
 
@@ -136,11 +154,10 @@ function getAmountOut(uint256 amountIn, uint256 reserveIn, uint256 reserveOut) e
 
 ### getAmountsIn
 
-
-
-```solidity title="Solidity"
+```solidity
 function getAmountsIn(uint256 amountOut, address[] path) external view returns (uint256[] amounts)
 ```
+
 
 
 
@@ -160,11 +177,10 @@ function getAmountsIn(uint256 amountOut, address[] path) external view returns (
 
 ### getAmountsOut
 
-
-
-```solidity title="Solidity"
+```solidity
 function getAmountsOut(uint256 amountIn, address[] path) external view returns (uint256[] amounts)
 ```
+
 
 
 
@@ -182,32 +198,12 @@ function getAmountsOut(uint256 amountIn, address[] path) external view returns (
 |---|---|---|
 | amounts | uint256[] | undefined |
 
-### harvest
-
-
-
-```solidity title="Solidity"
-function harvest(uint256 percentage, address[] tokens, address[] receivers) external nonpayable
-```
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| percentage | uint256 | undefined |
-| tokens | address[] | undefined |
-| receivers | address[] | undefined |
-
 ### quote
 
-
-
-```solidity title="Solidity"
+```solidity
 function quote(uint256 amountA, uint256 reserveA, uint256 reserveB) external pure returns (uint256 amountB)
 ```
+
 
 
 
@@ -228,11 +224,10 @@ function quote(uint256 amountA, uint256 reserveA, uint256 reserveB) external pur
 
 ### removeLiquidity
 
-
-
-```solidity title="Solidity"
+```solidity
 function removeLiquidity(address tokenA, address tokenB, uint256 liquidity, uint256 amountAMin, uint256 amountBMin, address to, uint256 deadline) external nonpayable returns (uint256 amountA, uint256 amountB)
 ```
+
 
 
 
@@ -258,11 +253,10 @@ function removeLiquidity(address tokenA, address tokenB, uint256 liquidity, uint
 
 ### removeLiquidityETH
 
-
-
-```solidity title="Solidity"
+```solidity
 function removeLiquidityETH(address token, uint256 liquidity, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline) external nonpayable returns (uint256 amountToken, uint256 amountETH)
 ```
+
 
 
 
@@ -287,11 +281,10 @@ function removeLiquidityETH(address token, uint256 liquidity, uint256 amountToke
 
 ### removeLiquidityETHSupportingFeeOnTransferTokens
 
-
-
-```solidity title="Solidity"
+```solidity
 function removeLiquidityETHSupportingFeeOnTransferTokens(address token, uint256 liquidity, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline) external nonpayable returns (uint256 amountETH)
 ```
+
 
 
 
@@ -315,11 +308,10 @@ function removeLiquidityETHSupportingFeeOnTransferTokens(address token, uint256 
 
 ### removeLiquidityETHWithPermit
 
-
-
-```solidity title="Solidity"
+```solidity
 function removeLiquidityETHWithPermit(address token, uint256 liquidity, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline, bool approveMax, uint8 v, bytes32 r, bytes32 s) external nonpayable returns (uint256 amountToken, uint256 amountETH)
 ```
+
 
 
 
@@ -348,11 +340,10 @@ function removeLiquidityETHWithPermit(address token, uint256 liquidity, uint256 
 
 ### removeLiquidityETHWithPermitSupportingFeeOnTransferTokens
 
-
-
-```solidity title="Solidity"
+```solidity
 function removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(address token, uint256 liquidity, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline, bool approveMax, uint8 v, bytes32 r, bytes32 s) external nonpayable returns (uint256 amountETH)
 ```
+
 
 
 
@@ -380,11 +371,10 @@ function removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(address token
 
 ### removeLiquidityWithPermit
 
-
-
-```solidity title="Solidity"
+```solidity
 function removeLiquidityWithPermit(address tokenA, address tokenB, uint256 liquidity, uint256 amountAMin, uint256 amountBMin, address to, uint256 deadline, bool approveMax, uint8 v, bytes32 r, bytes32 s) external nonpayable returns (uint256 amountA, uint256 amountB)
 ```
+
 
 
 
@@ -414,11 +404,10 @@ function removeLiquidityWithPermit(address tokenA, address tokenB, uint256 liqui
 
 ### swapETHForExactTokens
 
-
-
-```solidity title="Solidity"
+```solidity
 function swapETHForExactTokens(uint256 amountOut, address[] path, address to, uint256 deadline) external payable returns (uint256[] amounts)
 ```
+
 
 
 
@@ -440,11 +429,10 @@ function swapETHForExactTokens(uint256 amountOut, address[] path, address to, ui
 
 ### swapExactETHForTokens
 
-
-
-```solidity title="Solidity"
+```solidity
 function swapExactETHForTokens(uint256 amountOutMin, address[] path, address to, uint256 deadline) external payable returns (uint256[] amounts)
 ```
+
 
 
 
@@ -466,11 +454,10 @@ function swapExactETHForTokens(uint256 amountOutMin, address[] path, address to,
 
 ### swapExactETHForTokensSupportingFeeOnTransferTokens
 
-
-
-```solidity title="Solidity"
+```solidity
 function swapExactETHForTokensSupportingFeeOnTransferTokens(uint256 amountOutMin, address[] path, address to, uint256 deadline) external payable
 ```
+
 
 
 
@@ -486,11 +473,10 @@ function swapExactETHForTokensSupportingFeeOnTransferTokens(uint256 amountOutMin
 
 ### swapExactTokensForETH
 
-
-
-```solidity title="Solidity"
+```solidity
 function swapExactTokensForETH(uint256 amountIn, uint256 amountOutMin, address[] path, address to, uint256 deadline) external nonpayable returns (uint256[] amounts)
 ```
+
 
 
 
@@ -513,11 +499,10 @@ function swapExactTokensForETH(uint256 amountIn, uint256 amountOutMin, address[]
 
 ### swapExactTokensForETHSupportingFeeOnTransferTokens
 
-
-
-```solidity title="Solidity"
+```solidity
 function swapExactTokensForETHSupportingFeeOnTransferTokens(uint256 amountIn, uint256 amountOutMin, address[] path, address to, uint256 deadline) external nonpayable
 ```
+
 
 
 
@@ -534,11 +519,10 @@ function swapExactTokensForETHSupportingFeeOnTransferTokens(uint256 amountIn, ui
 
 ### swapExactTokensForTokens
 
-
-
-```solidity title="Solidity"
+```solidity
 function swapExactTokensForTokens(uint256 amountIn, uint256 amountOutMin, address[] path, address to, uint256 deadline) external nonpayable returns (uint256[] amounts)
 ```
+
 
 
 
@@ -561,11 +545,10 @@ function swapExactTokensForTokens(uint256 amountIn, uint256 amountOutMin, addres
 
 ### swapExactTokensForTokensSupportingFeeOnTransferTokens
 
-
-
-```solidity title="Solidity"
+```solidity
 function swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256 amountIn, uint256 amountOutMin, address[] path, address to, uint256 deadline) external nonpayable
 ```
+
 
 
 
@@ -582,11 +565,10 @@ function swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256 amountIn,
 
 ### swapTokensForExactETH
 
-
-
-```solidity title="Solidity"
+```solidity
 function swapTokensForExactETH(uint256 amountOut, uint256 amountInMax, address[] path, address to, uint256 deadline) external nonpayable returns (uint256[] amounts)
 ```
+
 
 
 
@@ -609,11 +591,10 @@ function swapTokensForExactETH(uint256 amountOut, uint256 amountInMax, address[]
 
 ### swapTokensForExactTokens
 
-
-
-```solidity title="Solidity"
+```solidity
 function swapTokensForExactTokens(uint256 amountOut, uint256 amountInMax, address[] path, address to, uint256 deadline) external nonpayable returns (uint256[] amounts)
 ```
+
 
 
 
@@ -633,23 +614,6 @@ function swapTokensForExactTokens(uint256 amountOut, uint256 amountInMax, addres
 | Name | Type | Description |
 |---|---|---|
 | amounts | uint256[] | undefined |
-
-### transferOwnership
-
-
-
-```solidity title="Solidity"
-function transferOwnership(address newOwner) external nonpayable
-```
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| newOwner | address | undefined |
 
 
 
