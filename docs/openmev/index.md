@@ -22,12 +22,10 @@ transaction cost back <br />
 
 ### How OpenMEV works
 
-The client publishes the serialized transaction signed (via eth_sign or eth_signTransaction) by the user to our backend
-using the Our backend repeatedly publishes the transaction, each block, to participating miners, this includes Eden
-Network and Flashbots. Transaction status updates can be requested via JSON-RPC or automatically relayed to the client
+The client publishes the serialized transaction signed (via `eth_sign` or `eth_signTransaction`) by the user to our backend
+using the backend repeatedly publishes the transaction, each block, to participating miners, this includes Eden
+Network and Flash bots. Transaction status updates can be requested via JSON-RPC or automatically relayed to the client
 with the SDK. A user can cancel an unconfirmed transaction at any time for free, and reverted transactions cost no gas
-
-> We intend to release more features on top of Eden Network and Flashbots Protect in the future.
 
 ### Platform Documentation
 
@@ -46,7 +44,7 @@ infrastructure for transactions.
 
 - More accessible: allow ordinary users to easily discover the trading risk and value on the blockchain network
 
-- More convenient: enable the arbitrage traders more opportunities to increase profits at a low cost More secure: make
+- More convenient: enable the arbitrage traders more opportunities to increase profits at a low-cost More secure: make
   transactions on the blockchain network more secure and private.
 
 ### What public services does OpenMEV provide?
@@ -82,29 +80,8 @@ extracting MEV profits and returning them back to the traders.
 > - Vitalik Buterin, [credible neutrality as a guiding principle](https://nakamoto.com/credible-neutrality/)
 
 This ethos is at the heart of OpenMEV. Part of establishing credible neutrality is having a clear and comprehensive
-rulebook that regulates off-chain behavior and activities. Our assumption concerning governance is that methods and
+rule book that regulates off-chain behavior and activities. Our assumption concerning governance is that methods and
 processes that work in legacy markets may not be applicable in adversarial environments such as permissionless
-blockchains. With that understanding it is important not to rely soley on such systems and mechanics long term.
+blockchains. With that understanding it is important not to rely solely on such systems and mechanics long term.
 
 Discuss this and more on our [discourse forums](https://forums.manifoldfinance.com)
-
-### Acknowledgements
-
-> Not an exhaustive list
-
-- Robert Miller (@bertmiller)
-- Edgar Arout (@fxfactorial)
-- Alex Obadia
-- Nathan (@CodeForcer)
-- 0xMaki
-- Joseph Delong (@dangerousfood)
-- Alexey Akhunov (@AlexeyAkhunov)
-- Igor Barinov (@igorbarinov)
-- bokkypoobah (@bokkypoobah)
-- x48 (@x48-crypto)
-- Jonas Chevalier (@zimbatm)
-- BMG (@brianmcgee)
-- Aldo Borrero (@aldoborrero)
-- Sandy Bradley (@sandybradley)
-- Connor Gervin (@Connor-Gervin)
-- Ramin (@chillichelli)
