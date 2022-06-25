@@ -1,0 +1,599 @@
+# OpenMevRouterTest
+
+
+
+> OpenMevRouterTest
+
+
+
+
+
+## Methods
+
+### IS_TEST
+
+```solidity
+function IS_TEST() external view returns (bool)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
+
+### failed
+
+```solidity
+function failed() external view returns (bool)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
+
+### setUp
+
+```solidity
+function setUp() external nonpayable
+```
+
+
+
+
+
+
+### testAddLiquidityExpired
+
+```solidity
+function testAddLiquidityExpired() external nonpayable
+```
+
+
+
+
+
+
+### testAddLiquidityInsufficientAmountA
+
+```solidity
+function testAddLiquidityInsufficientAmountA() external nonpayable
+```
+
+
+
+
+
+
+### testAddLiquidityInsufficientAmountB
+
+```solidity
+function testAddLiquidityInsufficientAmountB() external nonpayable
+```
+
+
+
+
+
+
+### testAllPairs
+
+```solidity
+function testAllPairs() external nonpayable
+```
+
+
+
+
+
+
+### testLiquidityEth
+
+```solidity
+function testLiquidityEth() external nonpayable
+```
+
+
+
+
+
+
+### testLiquidityEthSupportingFeeOnTransfer
+
+```solidity
+function testLiquidityEthSupportingFeeOnTransfer() external nonpayable
+```
+
+
+
+
+
+
+### testLiquidityTokens
+
+```solidity
+function testLiquidityTokens() external nonpayable
+```
+
+
+
+
+
+
+### testSwapETHForExactTokens
+
+```solidity
+function testSwapETHForExactTokens() external nonpayable
+```
+
+
+
+
+
+
+### testSwapExactETHForTokens
+
+```solidity
+function testSwapExactETHForTokens() external nonpayable
+```
+
+
+
+
+
+
+### testSwapExactETHForTokensBackrun
+
+```solidity
+function testSwapExactETHForTokensBackrun() external nonpayable
+```
+
+
+
+
+
+
+### testSwapExactETHForTokensSupportingFeeOnTransferTokens
+
+```solidity
+function testSwapExactETHForTokensSupportingFeeOnTransferTokens() external nonpayable
+```
+
+
+
+
+
+
+### testSwapExactTokensForETH
+
+```solidity
+function testSwapExactTokensForETH() external nonpayable
+```
+
+
+
+
+
+
+### testSwapExactTokensForETHSupportingFeeOnTransferTokens
+
+```solidity
+function testSwapExactTokensForETHSupportingFeeOnTransferTokens() external nonpayable
+```
+
+
+
+
+
+
+### testSwapExactTokensForTokens
+
+```solidity
+function testSwapExactTokensForTokens() external nonpayable
+```
+
+
+
+
+
+
+### testSwapExactTokensForTokensSupportingFeeOnTransferTokens
+
+```solidity
+function testSwapExactTokensForTokensSupportingFeeOnTransferTokens() external nonpayable
+```
+
+
+
+
+
+
+### testSwapExpired
+
+```solidity
+function testSwapExpired() external nonpayable
+```
+
+
+
+
+
+
+### testSwapIdenticalAddresses
+
+```solidity
+function testSwapIdenticalAddresses() external nonpayable
+```
+
+
+
+
+
+
+### testSwapInsufficientOutputAmount
+
+```solidity
+function testSwapInsufficientOutputAmount() external nonpayable
+```
+
+
+
+
+
+
+### testSwapInvalidPath
+
+```solidity
+function testSwapInvalidPath() external nonpayable
+```
+
+
+
+
+
+
+### testSwapTokensForExactETH
+
+```solidity
+function testSwapTokensForExactETH() external nonpayable
+```
+
+
+
+
+
+
+### testSwapTokensForExactTokens
+
+```solidity
+function testSwapTokensForExactTokens() external nonpayable
+```
+
+
+
+
+
+
+### testSwapZeroAddress
+
+```solidity
+function testSwapZeroAddress() external nonpayable
+```
+
+
+
+
+
+
+### testSwapZeroAmount
+
+```solidity
+function testSwapZeroAmount() external nonpayable
+```
+
+
+
+
+
+
+
+
+## Events
+
+### log
+
+```solidity
+event log(string)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0  | string | undefined |
+
+### log_address
+
+```solidity
+event log_address(address)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0  | address | undefined |
+
+### log_bytes
+
+```solidity
+event log_bytes(bytes)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0  | bytes | undefined |
+
+### log_bytes32
+
+```solidity
+event log_bytes32(bytes32)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0  | bytes32 | undefined |
+
+### log_int
+
+```solidity
+event log_int(int256)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0  | int256 | undefined |
+
+### log_named_address
+
+```solidity
+event log_named_address(string key, address val)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| key  | string | undefined |
+| val  | address | undefined |
+
+### log_named_bool
+
+```solidity
+event log_named_bool(string key, bool val)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| key  | string | undefined |
+| val  | bool | undefined |
+
+### log_named_bytes
+
+```solidity
+event log_named_bytes(string key, bytes val)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| key  | string | undefined |
+| val  | bytes | undefined |
+
+### log_named_bytes32
+
+```solidity
+event log_named_bytes32(string key, bytes32 val)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| key  | string | undefined |
+| val  | bytes32 | undefined |
+
+### log_named_decimal_int
+
+```solidity
+event log_named_decimal_int(string key, int256 val, uint256 decimals)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| key  | string | undefined |
+| val  | int256 | undefined |
+| decimals  | uint256 | undefined |
+
+### log_named_decimal_uint
+
+```solidity
+event log_named_decimal_uint(string key, uint256 val, uint256 decimals)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| key  | string | undefined |
+| val  | uint256 | undefined |
+| decimals  | uint256 | undefined |
+
+### log_named_int
+
+```solidity
+event log_named_int(string key, int256 val)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| key  | string | undefined |
+| val  | int256 | undefined |
+
+### log_named_string
+
+```solidity
+event log_named_string(string key, string val)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| key  | string | undefined |
+| val  | string | undefined |
+
+### log_named_uint
+
+```solidity
+event log_named_uint(string key, uint256 val)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| key  | string | undefined |
+| val  | uint256 | undefined |
+
+### log_string
+
+```solidity
+event log_string(string)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0  | string | undefined |
+
+### log_uint
+
+```solidity
+event log_uint(uint256)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0  | uint256 | undefined |
+
+### logs
+
+```solidity
+event logs(bytes)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0  | bytes | undefined |
+
+
+

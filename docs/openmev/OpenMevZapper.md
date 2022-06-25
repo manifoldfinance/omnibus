@@ -1,8 +1,8 @@
----
-description: OpenMevZapper
----
+# OpenMevZapper
 
-# OpenMevZapper.sol
+
+
+> OpenMevZapper
 
 Optimal UniswapV2Pair Liquidity deposits and withdrawls with a single token / eth (or relevant native currency)
 
@@ -12,11 +12,10 @@ Optimal UniswapV2Pair Liquidity deposits and withdrawls with a single token / et
 
 ### router
 
-
-
-```solidity title="Solidity"
+```solidity
 function router() external view returns (contract IOpenMevRouter)
 ```
+
 
 
 
@@ -30,12 +29,11 @@ function router() external view returns (contract IOpenMevRouter)
 
 ### swapAndStakeLiquidity
 
-Adds liquidity to an ERC-20⇄ERC-20 pool from a single token. msg.sender should have already given the router an allowance of at least amountA on tokenA
-
-```solidity title="Solidity"
+```solidity
 function swapAndStakeLiquidity(address tokenA, address tokenB, uint256 amountA, uint256 amountBMin) external nonpayable returns (uint256 liquidity)
 ```
 
+Adds liquidity to an ERC-20⇄ERC-20 pool from a single token. msg.sender should have already given the router an allowance of at least amountA on tokenA
 
 
 
@@ -56,12 +54,11 @@ function swapAndStakeLiquidity(address tokenA, address tokenB, uint256 amountA, 
 
 ### swapETHAndStakeLiquidity
 
-Adds liquidity to an ERC-20⇄ERC-20 pool from eth. msg.value is treated as a amountETHDesired. Leftover ETH, if any, is returned to msg.sender
-
-```solidity title="Solidity"
+```solidity
 function swapETHAndStakeLiquidity(address tokenB, uint256 amountBMin) external payable returns (uint256 liquidity)
 ```
 
+Adds liquidity to an ERC-20⇄ERC-20 pool from eth. msg.value is treated as a amountETHDesired. Leftover ETH, if any, is returned to msg.sender
 
 
 
@@ -80,12 +77,11 @@ function swapETHAndStakeLiquidity(address tokenB, uint256 amountBMin) external p
 
 ### withdrawLiquidityAndSwap
 
-Removes liquidity from an ERC-20⇄ERC-20 pool into a single token / ETH . msg.sender should have already given the zapper an allowance of at least liquidity on the pool.
-
-```solidity title="Solidity"
+```solidity
 function withdrawLiquidityAndSwap(address pairAddress, uint256 withdrawAmount, address desiredToken, uint256 desiredTokenOutMin) external nonpayable returns (uint256 amountOut)
 ```
 
+Removes liquidity from an ERC-20⇄ERC-20 pool into a single token / ETH . msg.sender should have already given the zapper an allowance of at least liquidity on the pool.
 
 
 
@@ -111,9 +107,7 @@ function withdrawLiquidityAndSwap(address pairAddress, uint256 withdrawAmount, a
 
 ### IdenticalAddresses
 
-
-
-```solidity title="Solidity"
+```solidity
 error IdenticalAddresses()
 ```
 
@@ -121,11 +115,10 @@ error IdenticalAddresses()
 
 
 
+
 ### InsufficientAAmount
 
-
-
-```solidity title="Solidity"
+```solidity
 error InsufficientAAmount()
 ```
 
@@ -133,11 +126,10 @@ error InsufficientAAmount()
 
 
 
+
 ### InsufficientAllowance
 
-
-
-```solidity title="Solidity"
+```solidity
 error InsufficientAllowance()
 ```
 
@@ -145,11 +137,10 @@ error InsufficientAllowance()
 
 
 
+
 ### InsufficientBAmount
 
-
-
-```solidity title="Solidity"
+```solidity
 error InsufficientBAmount()
 ```
 
@@ -157,11 +148,10 @@ error InsufficientBAmount()
 
 
 
+
 ### InsufficientLiquidity
 
-
-
-```solidity title="Solidity"
+```solidity
 error InsufficientLiquidity()
 ```
 
@@ -169,11 +159,10 @@ error InsufficientLiquidity()
 
 
 
+
 ### InsufficientOutputAmount
 
-
-
-```solidity title="Solidity"
+```solidity
 error InsufficientOutputAmount()
 ```
 
@@ -181,11 +170,10 @@ error InsufficientOutputAmount()
 
 
 
+
 ### InvalidPath
 
-
-
-```solidity title="Solidity"
+```solidity
 error InvalidPath()
 ```
 
@@ -193,11 +181,10 @@ error InvalidPath()
 
 
 
+
 ### Overflow
 
-
-
-```solidity title="Solidity"
+```solidity
 error Overflow()
 ```
 
@@ -205,11 +192,10 @@ error Overflow()
 
 
 
+
 ### TransferFailed
 
-
-
-```solidity title="Solidity"
+```solidity
 error TransferFailed()
 ```
 
@@ -217,11 +203,10 @@ error TransferFailed()
 
 
 
+
 ### ZeroAddress
 
-
-
-```solidity title="Solidity"
+```solidity
 error ZeroAddress()
 ```
 
@@ -229,13 +214,13 @@ error ZeroAddress()
 
 
 
+
 ### ZeroAmount
 
-
-
-```solidity title="Solidity"
+```solidity
 error ZeroAmount()
 ```
+
 
 
 

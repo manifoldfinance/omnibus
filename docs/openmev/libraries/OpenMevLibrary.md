@@ -1,6 +1,6 @@
 # OpenMevLibrary
 
-*CommodityStream, Inc*
+*Sandy Bradley &lt;sandy@manifoldx.com&gt;, Sam Bacha &lt;sam@manifoldfinance.com&gt;*
 
 > OpenMevLibrary
 

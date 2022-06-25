@@ -1,8 +1,8 @@
----
-description: OpenMevRouter
----
+# OpenMevRouter
 
-# OpenMevRouter.sol
+*Sandy Bradley &lt;sandy@commoditystream.com&gt;, Sam Bacha &lt;sam@commoditystream.com&gt;, ControlCandP*
+
+> OpenMevRouter
 
 Optimal MEV router contract (IUniswapV2Router compatible)
 
@@ -12,27 +12,22 @@ Optimal MEV router contract (IUniswapV2Router compatible)
 
 ### acceptOwnership
 
-
-
-```solidity title="Solidity"
+```solidity
 function acceptOwnership() external nonpayable
 ```
 
 
-:::note Details
-Transfers ownership of the contract to the caller. Can only be called by a new potential owner set by the current owner.
-:::
 
+*Transfers ownership of the contract to the caller. Can only be called by a new potential owner set by the current owner.*
 
 
 ### addLiquidity
 
-Adds liquidity to an ERC-20⇄ERC-20 pool. msg.sender should have already given the router an allowance of at least amountADesired/amountBDesired on tokenA/tokenB
-
-```solidity title="Solidity"
+```solidity
 function addLiquidity(address tokenA, address tokenB, uint256 amountADesired, uint256 amountBDesired, uint256 amountAMin, uint256 amountBMin, address to, uint256 deadline) external nonpayable returns (uint256 amountA, uint256 amountB, uint256 liquidity)
 ```
 
+Adds liquidity to an ERC-20⇄ERC-20 pool. msg.sender should have already given the router an allowance of at least amountADesired/amountBDesired on tokenA/tokenB
 
 
 
@@ -59,12 +54,11 @@ function addLiquidity(address tokenA, address tokenB, uint256 amountADesired, ui
 
 ### addLiquidityETH
 
-Adds liquidity to an ERC-20⇄WETH pool with ETH. msg.sender should have already given the router an allowance of at least amountTokenDesired on token. msg.value is treated as a amountETHDesired. Leftover ETH, if any, is returned to msg.sender
-
-```solidity title="Solidity"
+```solidity
 function addLiquidityETH(address token, uint256 amountTokenDesired, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline) external payable returns (uint256 amountToken, uint256 amountETH, uint256 liquidity)
 ```
 
+Adds liquidity to an ERC-20⇄WETH pool with ETH. msg.sender should have already given the router an allowance of at least amountTokenDesired on token. msg.value is treated as a amountETHDesired. Leftover ETH, if any, is returned to msg.sender
 
 
 
@@ -89,32 +83,24 @@ function addLiquidityETH(address token, uint256 amountTokenDesired, uint256 amou
 
 ### cancelOwnershipTransfer
 
-
-
-```solidity title="Solidity"
-function cancelOwnershipTransfer() external nonpayable
+```solidity
+function cancelOwnershipTransfer() external payable
 ```
 
 
-:::note Details
-Cancel a transfer of ownership to a new account. Can only be called by the current owner.
-:::
 
+*Cancel a transfer of ownership to a new account. Can only be called by the current owner.*
 
 
 ### executeOperation
 
-Called from Aave Lending pool after contract has received the flash loaned amount (https://docs.aave.com/developers/v/2.0/guides/flash-loans)
-
-```solidity title="Solidity"
+```solidity
 function executeOperation(address[] assets, uint256[] amounts, uint256[] premiums, address initiator, bytes params) external nonpayable returns (bool)
 ```
 
+Called from Aave Lending pool after contract has received the flash loaned amount (https://docs.aave.com/developers/v/2.0/guides/flash-loans)
 
-:::note Details
-Reverts if not profitable.
-:::
-
+*Reverts if not profitable.*
 
 #### Parameters
 
@@ -134,11 +120,10 @@ Reverts if not profitable.
 
 ### getAmountIn
 
-
-
-```solidity title="Solidity"
+```solidity
 function getAmountIn(uint256 amountOut, uint256 reserveIn, uint256 reserveOut) external pure returns (uint256 amountIn)
 ```
+
 
 
 
@@ -159,11 +144,10 @@ function getAmountIn(uint256 amountOut, uint256 reserveIn, uint256 reserveOut) e
 
 ### getAmountOut
 
-
-
-```solidity title="Solidity"
+```solidity
 function getAmountOut(uint256 amountIn, uint256 reserveIn, uint256 reserveOut) external pure returns (uint256 amountOut)
 ```
+
 
 
 
@@ -184,11 +168,10 @@ function getAmountOut(uint256 amountIn, uint256 reserveIn, uint256 reserveOut) e
 
 ### getAmountsIn
 
-
-
-```solidity title="Solidity"
+```solidity
 function getAmountsIn(uint256 amountOut, address[] path) external view returns (uint256[] amounts)
 ```
+
 
 
 
@@ -208,11 +191,10 @@ function getAmountsIn(uint256 amountOut, address[] path) external view returns (
 
 ### getAmountsOut
 
-
-
-```solidity title="Solidity"
+```solidity
 function getAmountsOut(uint256 amountIn, address[] path) external view returns (uint256[] amounts)
 ```
+
 
 
 
@@ -232,12 +214,11 @@ function getAmountsOut(uint256 amountIn, address[] path) external view returns (
 
 ### harvest
 
-Multi-sig consensus call to distribute a given percentage of specified tokens to specified receivers.
-
-```solidity title="Solidity"
-function harvest(uint256 percentage, address[] tokens, address[] receivers) external nonpayable
+```solidity
+function harvest(uint256 percentage, address[] tokens, address[] receivers) external payable
 ```
 
+Multi-sig consensus call to distribute a given percentage of specified tokens to specified receivers.
 
 
 
@@ -251,17 +232,13 @@ function harvest(uint256 percentage, address[] tokens, address[] receivers) exte
 
 ### isOwner
 
-
-
-```solidity title="Solidity"
+```solidity
 function isOwner() external view returns (bool)
 ```
 
 
-:::note Details
-Returns true if the caller is the current owner.
-:::
 
+*Returns true if the caller is the current owner.*
 
 
 #### Returns
@@ -270,19 +247,35 @@ Returns true if the caller is the current owner.
 |---|---|---|
 | _0 | bool | undefined |
 
+### onFlashLoan
+
+```solidity
+function onFlashLoan(address sender, address token, uint256 amount, uint256 fee, bytes data) external nonpayable
+```
+
+Called from BentoBox Lending pool after contract has received the flash loaned amount
+
+*Reverts if not profitable.*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| sender | address | Address of flashloan initiator |
+| token | address | Token to loan |
+| amount | uint256 | Amount to loan |
+| fee | uint256 | Fee to repay on loan amount |
+| data | bytes | Encoded factories and tokens |
+
 ### owner
 
-
-
-```solidity title="Solidity"
+```solidity
 function owner() external view returns (address)
 ```
 
 
-:::note Details
-Returns the address of the current owner.
-:::
 
+*Returns the address of the current owner.*
 
 
 #### Returns
@@ -293,11 +286,10 @@ Returns the address of the current owner.
 
 ### quote
 
-
-
-```solidity title="Solidity"
+```solidity
 function quote(uint256 amountA, uint256 reserveA, uint256 reserveB) external pure returns (uint256 amountB)
 ```
+
 
 
 
@@ -318,12 +310,11 @@ function quote(uint256 amountA, uint256 reserveA, uint256 reserveB) external pur
 
 ### removeLiquidity
 
-**** REMOVE LIQUIDITY ****Removes liquidity from an ERC-20⇄ERC-20 pool. msg.sender should have already given the router an allowance of at least liquidity on the pool.
-
-```solidity title="Solidity"
+```solidity
 function removeLiquidity(address tokenA, address tokenB, uint256 liquidity, uint256 amountAMin, uint256 amountBMin, address to, uint256 deadline) external nonpayable returns (uint256 amountA, uint256 amountB)
 ```
 
+Removes liquidity from an ERC-20⇄ERC-20 pool. msg.sender should have already given the router an allowance of at least liquidity on the pool.
 
 
 
@@ -348,12 +339,11 @@ function removeLiquidity(address tokenA, address tokenB, uint256 liquidity, uint
 
 ### removeLiquidityETH
 
-Removes liquidity from an ERC-20⇄WETH pool and receive ETH. msg.sender should have already given the router an allowance of at least liquidity on the pool.
-
-```solidity title="Solidity"
+```solidity
 function removeLiquidityETH(address token, uint256 liquidity, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline) external nonpayable returns (uint256 amountToken, uint256 amountETH)
 ```
 
+Removes liquidity from an ERC-20⇄WETH pool and receive ETH. msg.sender should have already given the router an allowance of at least liquidity on the pool.
 
 
 
@@ -377,12 +367,11 @@ function removeLiquidityETH(address token, uint256 liquidity, uint256 amountToke
 
 ### removeLiquidityETHSupportingFeeOnTransferTokens
 
-Identical to removeLiquidityETH, but succeeds for tokens that take a fee on transfer. msg.sender should have already given the router an allowance of at least liquidity on the pool.
-
-```solidity title="Solidity"
+```solidity
 function removeLiquidityETHSupportingFeeOnTransferTokens(address token, uint256 liquidity, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline) external nonpayable returns (uint256 amountETH)
 ```
 
+Identical to removeLiquidityETH, but succeeds for tokens that take a fee on transfer. msg.sender should have already given the router an allowance of at least liquidity on the pool.
 
 
 
@@ -405,12 +394,11 @@ function removeLiquidityETHSupportingFeeOnTransferTokens(address token, uint256 
 
 ### removeLiquidityETHWithPermit
 
-Removes liquidity from an ERC-20⇄WETTH pool and receive ETH without pre-approval, thanks to permit
-
-```solidity title="Solidity"
+```solidity
 function removeLiquidityETHWithPermit(address token, uint256 liquidity, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline, bool approveMax, uint8 v, bytes32 r, bytes32 s) external nonpayable returns (uint256 amountToken, uint256 amountETH)
 ```
 
+Removes liquidity from an ERC-20⇄WETTH pool and receive ETH without pre-approval, thanks to permit
 
 
 
@@ -438,12 +426,11 @@ function removeLiquidityETHWithPermit(address token, uint256 liquidity, uint256 
 
 ### removeLiquidityETHWithPermitSupportingFeeOnTransferTokens
 
-Identical to removeLiquidityETHWithPermit, but succeeds for tokens that take a fee on transfer.
-
-```solidity title="Solidity"
+```solidity
 function removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(address token, uint256 liquidity, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline, bool approveMax, uint8 v, bytes32 r, bytes32 s) external nonpayable returns (uint256 amountETH)
 ```
 
+Identical to removeLiquidityETHWithPermit, but succeeds for tokens that take a fee on transfer.
 
 
 
@@ -470,12 +457,11 @@ function removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(address token
 
 ### removeLiquidityWithPermit
 
-Removes liquidity from an ERC-20⇄ERC-20 pool without pre-approval, thanks to permit.
-
-```solidity title="Solidity"
+```solidity
 function removeLiquidityWithPermit(address tokenA, address tokenB, uint256 liquidity, uint256 amountAMin, uint256 amountBMin, address to, uint256 deadline, bool approveMax, uint8 v, bytes32 r, bytes32 s) external nonpayable returns (uint256 amountA, uint256 amountB)
 ```
 
+Removes liquidity from an ERC-20⇄ERC-20 pool without pre-approval, thanks to permit.
 
 
 
@@ -504,17 +490,13 @@ function removeLiquidityWithPermit(address tokenA, address tokenB, uint256 liqui
 
 ### swapETHForExactTokens
 
-Receive an exact amount of tokens for as little ETH as possible, along the route determined by the path. The first element of path must be WETH. Leftover ETH, if any, is returned to msg.sender. amountInMax = msg.value
-
-```solidity title="Solidity"
+```solidity
 function swapETHForExactTokens(uint256 amountOut, address[] path, address to, uint256 deadline) external payable returns (uint256[] amounts)
 ```
 
+Receive an exact amount of tokens for as little ETH as possible, along the route determined by the path. The first element of path must be WETH9. Leftover ETH, if any, is returned to msg.sender. amountInMax = msg.value
 
-:::note Details
-Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.
-:::
-
+*Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.*
 
 #### Parameters
 
@@ -533,17 +515,13 @@ Require has been replaced with revert for gas optimization. Fallback alternate r
 
 ### swapExactETHForTokens
 
-Swaps an exact amount of ETH for as many output tokens as possible, along the route determined by the path. The first element of path must be WETH, the last is the output token. amountIn = msg.value
-
-```solidity title="Solidity"
+```solidity
 function swapExactETHForTokens(uint256 amountOutMin, address[] path, address to, uint256 deadline) external payable returns (uint256[] amounts)
 ```
 
+Swaps an exact amount of ETH for as many output tokens as possible, along the route determined by the path. The first element of path must be WETH9, the last is the output token. amountIn = msg.value
 
-:::note Details
-Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.
-:::
-
+*Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.*
 
 #### Parameters
 
@@ -562,17 +540,13 @@ Require has been replaced with revert for gas optimization. Fallback alternate r
 
 ### swapExactETHForTokensSupportingFeeOnTransferTokens
 
-Identical to swapExactETHForTokens, but succeeds for tokens that take a fee on transfer. amountIn = msg.value
-
-```solidity title="Solidity"
+```solidity
 function swapExactETHForTokensSupportingFeeOnTransferTokens(uint256 amountOutMin, address[] path, address to, uint256 deadline) external payable
 ```
 
+Identical to swapExactETHForTokens, but succeeds for tokens that take a fee on transfer. amountIn = msg.value
 
-:::note Details
-Require has been replaced with revert for gas optimization. Attempt to back-run swaps.
-:::
-
+*Require has been replaced with revert for gas optimization. Attempt to back-run swaps.*
 
 #### Parameters
 
@@ -585,17 +559,13 @@ Require has been replaced with revert for gas optimization. Attempt to back-run 
 
 ### swapExactTokensForETH
 
-Swaps an exact amount of tokens for as much ETH as possible, along the route determined by the path. The first element of path is the input token, the last must be WETH.
-
-```solidity title="Solidity"
+```solidity
 function swapExactTokensForETH(uint256 amountIn, uint256 amountOutMin, address[] path, address to, uint256 deadline) external nonpayable returns (uint256[] amounts)
 ```
 
+Swaps an exact amount of tokens for as much ETH as possible, along the route determined by the path. The first element of path is the input token, the last must be WETH9.
 
-:::note Details
-Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.
-:::
-
+*Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.*
 
 #### Parameters
 
@@ -615,17 +585,13 @@ Require has been replaced with revert for gas optimization. Fallback alternate r
 
 ### swapExactTokensForETHSupportingFeeOnTransferTokens
 
-Identical to swapExactTokensForETH, but succeeds for tokens that take a fee on transfer.
-
-```solidity title="Solidity"
+```solidity
 function swapExactTokensForETHSupportingFeeOnTransferTokens(uint256 amountIn, uint256 amountOutMin, address[] path, address to, uint256 deadline) external nonpayable
 ```
 
+Identical to swapExactTokensForETH, but succeeds for tokens that take a fee on transfer.
 
-:::note Details
-Require has been replaced with revert for gas optimization. Attempt to back-run swaps.
-:::
-
+*Require has been replaced with revert for gas optimization. Attempt to back-run swaps.*
 
 #### Parameters
 
@@ -639,17 +605,13 @@ Require has been replaced with revert for gas optimization. Attempt to back-run 
 
 ### swapExactTokensForTokens
 
-Swaps an exact amount of input tokens for as many output tokens as possible, along the route determined by the path. The first element of path is the input token, the last is the output token, and any intermediate elements represent intermediate pairs to trade through. msg.sender should have already given the router an allowance of at least amountIn on the input token.
-
-```solidity title="Solidity"
+```solidity
 function swapExactTokensForTokens(uint256 amountIn, uint256 amountOutMin, address[] path, address to, uint256 deadline) external nonpayable returns (uint256[] amounts)
 ```
 
+Swaps an exact amount of input tokens for as many output tokens as possible, along the route determined by the path. The first element of path is the input token, the last is the output token, and any intermediate elements represent intermediate pairs to trade through. msg.sender should have already given the router an allowance of at least amountIn on the input token.
 
-:::note Details
-Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.
-:::
-
+*Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.*
 
 #### Parameters
 
@@ -669,17 +631,13 @@ Require has been replaced with revert for gas optimization. Fallback alternate r
 
 ### swapExactTokensForTokensSupportingFeeOnTransferTokens
 
-Identical to swapExactTokensForTokens, but succeeds for tokens that take a fee on transfer. msg.sender should have already given the router an allowance of at least amountIn on the input token.
-
-```solidity title="Solidity"
+```solidity
 function swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256 amountIn, uint256 amountOutMin, address[] path, address to, uint256 deadline) external nonpayable
 ```
 
+Identical to swapExactTokensForTokens, but succeeds for tokens that take a fee on transfer. msg.sender should have already given the router an allowance of at least amountIn on the input token.
 
-:::note Details
-Require has been replaced with revert for gas optimization. Attempt to back-run swaps.
-:::
-
+*Require has been replaced with revert for gas optimization. Attempt to back-run swaps.*
 
 #### Parameters
 
@@ -693,17 +651,13 @@ Require has been replaced with revert for gas optimization. Attempt to back-run 
 
 ### swapTokensForExactETH
 
-Receive an exact amount of ETH for as few input tokens as possible, along the route determined by the path. The first element of path is the input token, the last must be WETH. msg.sender should have already given the router an allowance of at least amountInMax on the input token.
-
-```solidity title="Solidity"
+```solidity
 function swapTokensForExactETH(uint256 amountOut, uint256 amountInMax, address[] path, address to, uint256 deadline) external nonpayable returns (uint256[] amounts)
 ```
 
+Receive an exact amount of ETH for as few input tokens as possible, along the route determined by the path. The first element of path is the input token, the last must be WETH9. msg.sender should have already given the router an allowance of at least amountInMax on the input token.
 
-:::note Details
-Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.
-:::
-
+*Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.*
 
 #### Parameters
 
@@ -723,17 +677,13 @@ Require has been replaced with revert for gas optimization. Fallback alternate r
 
 ### swapTokensForExactTokens
 
-Receive an exact amount of output tokens for as few input tokens as possible, along the route determined by the path. msg.sender should have already given the router an allowance of at least amountInMax on the input token.
-
-```solidity title="Solidity"
+```solidity
 function swapTokensForExactTokens(uint256 amountOut, uint256 amountInMax, address[] path, address to, uint256 deadline) external nonpayable returns (uint256[] amounts)
 ```
 
+Receive an exact amount of output tokens for as few input tokens as possible, along the route determined by the path. msg.sender should have already given the router an allowance of at least amountInMax on the input token.
 
-:::note Details
-Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.
-:::
-
+*Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.*
 
 #### Parameters
 
@@ -753,17 +703,13 @@ Require has been replaced with revert for gas optimization. Fallback alternate r
 
 ### transferOwnership
 
-
-
-```solidity title="Solidity"
-function transferOwnership(address newOwner) external nonpayable
+```solidity
+function transferOwnership(address newOwner) external payable
 ```
 
 
-:::note Details
-Allows a new account (`newOwner`) to accept ownership. Can only be called by the current owner.
-:::
 
+*Allows a new account (`newOwner`) to accept ownership. Can only be called by the current owner.*
 
 #### Parameters
 
@@ -771,17 +717,79 @@ Allows a new account (`newOwner`) to accept ownership. Can only be called by the
 |---|---|---|
 | newOwner | address | undefined |
 
+### updateAaveAsset
+
+```solidity
+function updateAaveAsset(bool isActive, address asset) external payable
+```
+
+Update internal Aave asset flag
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| isActive | bool | Boolean flagging whether to use the asset for Aave flashloans |
+| asset | address | Address of asset |
+
+### updateAllAaveAssets
+
+```solidity
+function updateAllAaveAssets() external payable
+```
+
+Update all internal Aave assets
+
+
+
+
 
 
 ## Events
 
+### LoanError
+
+```solidity
+event LoanError(address indexed token, uint256 amountIn)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| token `indexed` | address | undefined |
+| amountIn  | uint256 | undefined |
+
+### MEV
+
+```solidity
+event MEV(address indexed user, address indexed token, uint256 value)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| user `indexed` | address | undefined |
+| token `indexed` | address | undefined |
+| value  | uint256 | undefined |
+
 ### OwnershipTransferred
 
-
-
-```solidity title="Solidity"
+```solidity
 event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
 ```
+
 
 
 
@@ -799,9 +807,7 @@ event OwnershipTransferred(address indexed previousOwner, address indexed newOwn
 
 ### ExcessiveInputAmount
 
-
-
-```solidity title="Solidity"
+```solidity
 error ExcessiveInputAmount()
 ```
 
@@ -809,11 +815,10 @@ error ExcessiveInputAmount()
 
 
 
+
 ### ExecuteNotAuthorized
 
-
-
-```solidity title="Solidity"
+```solidity
 error ExecuteNotAuthorized()
 ```
 
@@ -821,11 +826,10 @@ error ExecuteNotAuthorized()
 
 
 
+
 ### Expired
 
-
-
-```solidity title="Solidity"
+```solidity
 error Expired()
 ```
 
@@ -833,11 +837,10 @@ error Expired()
 
 
 
+
 ### IdenticalAddresses
 
-
-
-```solidity title="Solidity"
+```solidity
 error IdenticalAddresses()
 ```
 
@@ -845,11 +848,10 @@ error IdenticalAddresses()
 
 
 
+
 ### InsufficientAAmount
 
-
-
-```solidity title="Solidity"
+```solidity
 error InsufficientAAmount()
 ```
 
@@ -857,11 +859,21 @@ error InsufficientAAmount()
 
 
 
+
+### InsufficientAllowance
+
+```solidity
+error InsufficientAllowance()
+```
+
+
+
+
+
+
 ### InsufficientBAmount
 
-
-
-```solidity title="Solidity"
+```solidity
 error InsufficientBAmount()
 ```
 
@@ -869,11 +881,10 @@ error InsufficientBAmount()
 
 
 
+
 ### InsufficientLiquidity
 
-
-
-```solidity title="Solidity"
+```solidity
 error InsufficientLiquidity()
 ```
 
@@ -881,11 +892,10 @@ error InsufficientLiquidity()
 
 
 
+
 ### InsufficientOutputAmount
 
-
-
-```solidity title="Solidity"
+```solidity
 error InsufficientOutputAmount()
 ```
 
@@ -893,11 +903,10 @@ error InsufficientOutputAmount()
 
 
 
+
 ### InvalidPath
 
-
-
-```solidity title="Solidity"
+```solidity
 error InvalidPath()
 ```
 
@@ -905,11 +914,43 @@ error InvalidPath()
 
 
 
+
+### NoReceivers
+
+```solidity
+error NoReceivers()
+```
+
+
+
+
+
+
+### NoTokens
+
+```solidity
+error NoTokens()
+```
+
+
+
+
+
+
+### NotPercent
+
+```solidity
+error NotPercent()
+```
+
+
+
+
+
+
 ### Overflow
 
-
-
-```solidity title="Solidity"
+```solidity
 error Overflow()
 ```
 
@@ -917,11 +958,32 @@ error Overflow()
 
 
 
+
+### TokenIsFeeOnTransfer
+
+```solidity
+error TokenIsFeeOnTransfer()
+```
+
+
+
+
+
+
+### TransferFailed
+
+```solidity
+error TransferFailed()
+```
+
+
+
+
+
+
 ### Unauthorized
 
-
-
-```solidity title="Solidity"
+```solidity
 error Unauthorized()
 ```
 
@@ -929,11 +991,10 @@ error Unauthorized()
 
 
 
+
 ### ZeroAddress
 
-
-
-```solidity title="Solidity"
+```solidity
 error ZeroAddress()
 ```
 
@@ -941,13 +1002,13 @@ error ZeroAddress()
 
 
 
+
 ### ZeroAmount
 
-
-
-```solidity title="Solidity"
+```solidity
 error ZeroAmount()
 ```
+
 
 
 
