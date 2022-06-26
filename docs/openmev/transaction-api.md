@@ -63,11 +63,11 @@ To check the status of your transactions query the OpenMEV API Endpoint. Respons
  */
 
 export enum PrivateTxState {
-  UNCHECKED = 'UNCHECKED',
-  PROCESSING = 'PROCESSING',
-  OK = 'OK',
-  INDETERMINATE = 'INDETERMINATE',
-  ERROR = 'ERROR',
+  UNCHECKED = "UNCHECKED",
+  PROCESSING = "PROCESSING",
+  OK = "OK",
+  INDETERMINATE = "INDETERMINATE",
+  ERROR = "ERROR",
 }
 
 export type RelayResponses = Record<string, RelayResponse>;
@@ -103,23 +103,22 @@ The block parameter can have the following values:
 
 Use `eth_subscribe` to create subscriptions for the following event types:
 
-- New headers    
-- Logs    
-- Pending transactions    
-- Dropped transactions    
-
+- New headers
+- Logs
+- Pending transactions
+- Dropped transactions
 
 ## Logs
 
-To notify you about logs included in new blocks, use the logs' parameter with `eth_subscribe` or `mev_subscribe`.    
+To notify you about logs included in new blocks, use the logs' parameter with `eth_subscribe` or `mev_subscribe`.  
 Specify a filter object to receive notifications only for logs matching your filter.
 
 Logs subscriptions have a filter object parameter with the following fields:
 
-`address` - (optional) Either an address or an array of addresses. Returns only logs created from these addresses.    
-`topics` - (optional) Returns only logs that match the specified topics.    
-`fromBlock` - (optional) The earliest block from which to return logs.    
-`toBlock` - (optional) The last block from which to return logs.    
+`address` - (optional) Either an address or an array of addresses. Returns only logs created from these addresses.  
+`topics` - (optional) Returns only logs that match the specified topics.  
+`fromBlock` - (optional) The earliest block from which to return logs.  
+`toBlock` - (optional) The last block from which to return logs.
 
 If a chain _reorganization_ occurs, the subscription publishes notifications for logs from the old chain with the
 removed property in the log object set to true. This means the subscription can publish notifications for multiple logs
@@ -129,46 +128,41 @@ for the same transaction.
 
 These are methods we support for which we return static responses to ensure compliance
 
-
-| rpc_method                              | endpoint    |
-|-----------------------------------------|-------------|
-| eth_getUncleByBlockNumberAndIndex       |   v1        |
-| eth_protocolVersion            |   v1        |
-| net_version          |   v1        |
-| web3_clientVersion                  |   v1        |
-| eth_chainId                  |   v1        |
-
-
+| rpc_method                        | endpoint |
+| --------------------------------- | -------- |
+| eth_getUncleByBlockNumberAndIndex | v1       |
+| eth_protocolVersion               | v1       |
+| net_version                       | v1       |
+| web3_clientVersion                | v1       |
+| eth_chainId                       | v1       |
 
 ### Supported RPC Methods
 
 These are all methods we expose and proxy to our internal eth clients
 
-
-| rpc_method                              | endpoint    |
-|-----------------------------------------|-------------|
-| eth_blockNumber                         |   v1        |
-| eth_call                                |   v1        |
-| eth_estimateGas                         |   v1        |
-| eth_gasPrice                            |   v1        |
-| eth_getBalance                          |   v1        |
-| eth_getBlockByHash                      |   v1        |
-| eth_getBlockByNumber                    |   v1        |
-| eth_getBlockTransactionCountByHash      |   v1        |
-| eth_getBlockTransactionCountByNumber    |   v1        |
-| eth_getCode                             |   v1        |
-| eth_getStorageAt                        |   v1        |
-| eth_getTransactionByBlockHashAndIndex   |   v1        |
-| eth_getTransactionByBlockNumberAndIndex |   v1        |
-| eth_getTransactionByHash                |   v1        |
-| eth_getTransactionCount                 |   v1        |
-| eth_getTransactionReceipt               |   v1        |
-| eth_getUncleByBlockHashAndIndex         |   v1        |
-| eth_getUncleByBlockNumberAndIndex       |   v1        |
-| eth_getUncleCountByBlockHash            |   v1        |
-| eth_getUncleCountByBlockNumber          |   v1        |
-| eth_sendRawTransaction                  |   v1        |
- 
+| rpc_method                              | endpoint |
+| --------------------------------------- | -------- |
+| eth_blockNumber                         | v1       |
+| eth_call                                | v1       |
+| eth_estimateGas                         | v1       |
+| eth_gasPrice                            | v1       |
+| eth_getBalance                          | v1       |
+| eth_getBlockByHash                      | v1       |
+| eth_getBlockByNumber                    | v1       |
+| eth_getBlockTransactionCountByHash      | v1       |
+| eth_getBlockTransactionCountByNumber    | v1       |
+| eth_getCode                             | v1       |
+| eth_getStorageAt                        | v1       |
+| eth_getTransactionByBlockHashAndIndex   | v1       |
+| eth_getTransactionByBlockNumberAndIndex | v1       |
+| eth_getTransactionByHash                | v1       |
+| eth_getTransactionCount                 | v1       |
+| eth_getTransactionReceipt               | v1       |
+| eth_getUncleByBlockHashAndIndex         | v1       |
+| eth_getUncleByBlockNumberAndIndex       | v1       |
+| eth_getUncleCountByBlockHash            | v1       |
+| eth_getUncleCountByBlockNumber          | v1       |
+| eth_sendRawTransaction                  | v1       |
 
 ### SecureRPC MEV Transaction
 
@@ -177,7 +171,6 @@ Same signature as `eth_sendRawTransaction`
 ```
 manifold_sendTransaction
 ```
-
 
 ## 3rd Party Compatible APIs
 
@@ -193,10 +186,9 @@ identical, but should be comparable and fit for the same purposes.
 Additionally, our APIs will generally provide addresses in checksummed
 format.
 
-
 ## Etherscan Compatible
 
-SecureRPC implements the following Etherscan compatible APIs. 
+SecureRPC implements the following Etherscan compatible APIs.
 All Etherscan compatible API calls are of the form:
 
 ```env
@@ -216,15 +208,14 @@ either the sender, recipient, or the contract created by a transaction.
 
 The following parameters are available:
 
-| **Key** 	| **Value** 	| **Description** 	|
-|---	|---	|---	|
-| address  	| (required) 	| The Ethereum address to look up related nft transfers. 	|
-| startblock 	| (default 0) 	| The beginning of the block range to inspect. 	|
-| endblock 	| (default 99999999) 	| The end of the block range to inspect. 	|
-| offset  	| (default 10000) 	| The maximum number of records to be returned. 	|
-| page  	| (default 1) 	| The page number (assuming each page has a size of offset) 	|
-| sort 	| (default asc) 	| Whether records should be sorted ascending (asc - earliest records first) or descending (desc - oldest records first). 	|
-
+| **Key**    | **Value**          | **Description**                                                                                                        |
+| ---------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| address    | (required)         | The Ethereum address to look up related nft transfers.                                                                 |
+| startblock | (default 0)        | The beginning of the block range to inspect.                                                                           |
+| endblock   | (default 99999999) | The end of the block range to inspect.                                                                                 |
+| offset     | (default 10000)    | The maximum number of records to be returned.                                                                          |
+| page       | (default 1)        | The page number (assuming each page has a size of offset)                                                              |
+| sort       | (default asc)      | Whether records should be sorted ascending (asc - earliest records first) or descending (desc - oldest records first). |
 
 <div class="note">
 <div class="title">
@@ -250,16 +241,17 @@ occurred.
 ```bash
     curl -sL 'https://api.securerpc.com/eth/api?module=account&action=tokentx&address=0xA0766B65A4f7B1da79a1AF79aC695456eFa28644'
 ```
+
 The following parameters are available:
 
-| **Key** 	| **Value** 	| **Description** 	|
-|---	|---	|---	|
-| address  	| (required) 	| The Ethereum address to look up related nft transfers. 	|
-| startblock 	| (default 0) 	| The beginning of the block range to inspect. 	|
-| endblock 	| (default 99999999) 	| The end of the block range to inspect. 	|
-| offset  	| (default 10000) 	| The maximum number of records to be returned. 	|
-| page  	| (default 1) 	| The page number (assuming each page has a size of offset) 	|
-| sort 	| (default desc) 	| Whether records should be sorted ascending (asc - earliest records first) or descending (desc - oldest records first). 	|
+| **Key**    | **Value**          | **Description**                                                                                                        |
+| ---------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| address    | (required)         | The Ethereum address to look up related nft transfers.                                                                 |
+| startblock | (default 0)        | The beginning of the block range to inspect.                                                                           |
+| endblock   | (default 99999999) | The end of the block range to inspect.                                                                                 |
+| offset     | (default 10000)    | The maximum number of records to be returned.                                                                          |
+| page       | (default 1)        | The page number (assuming each page has a size of offset)                                                              |
+| sort       | (default desc)     | Whether records should be sorted ascending (asc - earliest records first) or descending (desc - oldest records first). |
 
 ### Account NFT Token Transfer List
 
@@ -270,16 +262,17 @@ occurred.
 ```bash
     curl 'https://api.securerpc.com/eth/api?module=account&action=tokennfttx&address=0xA0766B65A4f7B1da79a1AF79aC695456eFa28644'
 ```
+
 The following parameters are available:
 
-| **Key** 	| **Value** 	| **Description** 	|
-|---	|---	|---	|
-| address  	| (required) 	| The Ethereum address to look up related nft transfers. 	|
-| startblock 	| (default 0) 	| The beginning of the block range to inspect. 	|
-| endblock 	| (default 99999999) 	| The end of the block range to inspect. 	|
-| offset  	| (default 10000) 	| The maximum number of records to be returned. 	|
-| page  	| (default 1) 	| The page number (assuming each page has a size of offset) 	|
-| sort 	| (default desc) 	| Whether records should be sorted ascending (asc - earliest records first) or descending (desc - oldest records first). 	|
+| **Key**    | **Value**          | **Description**                                                                                                        |
+| ---------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| address    | (required)         | The Ethereum address to look up related nft transfers.                                                                 |
+| startblock | (default 0)        | The beginning of the block range to inspect.                                                                           |
+| endblock   | (default 99999999) | The end of the block range to inspect.                                                                                 |
+| offset     | (default 10000)    | The maximum number of records to be returned.                                                                          |
+| page       | (default 1)        | The page number (assuming each page has a size of offset)                                                              |
+| sort       | (default desc)     | Whether records should be sorted ascending (asc - earliest records first) or descending (desc - oldest records first). |
 
 ### Account Get Mined Blocks
 
@@ -290,14 +283,15 @@ with this method.
 ```bash
     curl 'https://api.securerpc.com/eth/api?module=account&action=getminedblocks&address=0xA0766B65A4f7B1da79a1AF79aC695456eFa28644'
 ```
-| **Key** 	| **Value** 	| **Description** 	|
-|---	|---	|---	|
-| address  	| (required) 	| The Ethereum address to look up related nft transfers. 	|
-| startblock 	| (default 0) 	| The beginning of the block range to inspect. 	|
-| endblock 	| (default 99999999) 	| The end of the block range to inspect. 	|
-| offset  	| (default 10000) 	| The maximum number of records to be returned. 	|
-| page  	| (default 1) 	| The page number (assuming each page has a size of offset) 	|
-| sort 	| (default desc) 	| Whether records should be sorted ascending (asc - earliest records first) or descending (desc - oldest records first). 	|
+
+| **Key**    | **Value**          | **Description**                                                                                                        |
+| ---------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| address    | (required)         | The Ethereum address to look up related nft transfers.                                                                 |
+| startblock | (default 0)        | The beginning of the block range to inspect.                                                                           |
+| endblock   | (default 99999999) | The end of the block range to inspect.                                                                                 |
+| offset     | (default 10000)    | The maximum number of records to be returned.                                                                          |
+| page       | (default 1)        | The page number (assuming each page has a size of offset)                                                              |
+| sort       | (default desc)     | Whether records should be sorted ascending (asc - earliest records first) or descending (desc - oldest records first). |
 
 ### Block Countdown
 
@@ -308,7 +302,7 @@ seconds until a particular block is mined.
     curl 'https://api.securerpc.com/eth/api?module=block&action=getblockcountdown&blockno=13000000'
 ```
 
--   `blockno` (required): The block to countdown to
+- `blockno` (required): The block to countdown to
 
 ### Block Number By Time
 
@@ -316,14 +310,13 @@ seconds until a particular block is mined.
     curl 'https://api.securerpc.com/eth/api?module=block&action=getblocknobytime&timestamp=1600000000&closest=before'
 ```
 
--   `timestamp` (required): The unix timestamp (in seconds) of the target block
--   `closest` (default `before`): Whether to get the closest block before or the closest block after the specified time.
+- `timestamp` (required): The unix timestamp (in seconds) of the target block
+- `closest` (default `before`): Whether to get the closest block before or the closest block after the specified time.
 
 ### Token Info
-
 
 ```bash
     'https://api.securerpc.com/eth/api?module=token&action=tokeninfo&contractaddress=0xd084944d3c05cd115c09d072b9f44ba3e0e45921'
 ```
 
--   `contractraddress` (required): The contract address to get token info about.
+- `contractraddress` (required): The contract address to get token info about.

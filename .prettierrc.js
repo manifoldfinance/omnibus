@@ -13,8 +13,8 @@ module.exports = {
   endOfLine: 'lf',
   jsxBracketSameLine: false,
   jsxSingleQuote: false,
-  printWidth: 120,
-  proseWrap: 'always',
+  printWidth: 100,
+  proseWrap: 'preserve',
   quoteProps: 'consistent',
   semi: true,
   singleQuote: true,
@@ -22,4 +22,24 @@ module.exports = {
   trailingComma: 'all',
   useTabs: false,
   embeddedLanguageFormatting: 'auto',
-};
+  overrides: [
+    {
+      files: '*.md',
+      options: {
+        printWidth: 100,
+        tabWidth: 2,
+        arrowParens: 'always',
+        bracketSpacing: true,
+        endOfLine: 'lf',
+        proseWrap: 'preserve',
+        quoteProps: 'consistent',
+        semi: true,
+        singleQuote: false,
+        trailingComma: 'all',
+        useTabs: false,
+        embeddedLanguageFormatting: 'auto',
+      },
+    },
+  ],
+}; 
+

@@ -6,7 +6,6 @@ type: docs
 
 # Network Policy
 
-
 ## Support and Help
 
 <ops@manifoldfinnace.com> - [manifoldfinance/support](https://github.com/manifoldfinance/support) <br /> Never send
@@ -27,6 +26,6 @@ all security bugs seriously and if confirmed upon investigation we will patch it
 release a public security bulletin discussing the impact and credit the discoverer.
 
 Sam Bacha <sam@manifoldfinnance.com> <br />
-Network Operations 
-<ops@manifoldfinance.com> <br /> 
+Network Operations
+<ops@manifoldfinance.com> <br />
 admin <janitor@manifoldfinance.com> <br />

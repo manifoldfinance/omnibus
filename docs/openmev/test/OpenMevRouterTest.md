@@ -1,12 +1,6 @@
 # OpenMevRouterTest
 
-
-
 > OpenMevRouterTest
-
-
-
-
 
 ## Methods
 
@@ -16,16 +10,11 @@
 function IS_TEST() external view returns (bool)
 ```
 
-
-
-
-
-
 #### Returns
 
 | Name | Type | Description |
-|---|---|---|
-| _0 | bool | undefined |
+| ---- | ---- | ----------- |
+| \_0  | bool | undefined   |
 
 ### failed
 
@@ -33,16 +22,11 @@ function IS_TEST() external view returns (bool)
 function failed() external view returns (bool)
 ```
 
-
-
-
-
-
 #### Returns
 
 | Name | Type | Description |
-|---|---|---|
-| _0 | bool | undefined |
+| ---- | ---- | ----------- |
+| \_0  | bool | undefined   |
 
 ### setUp
 
@@ -50,21 +34,11 @@ function failed() external view returns (bool)
 function setUp() external nonpayable
 ```
 
-
-
-
-
-
 ### testAddLiquidityExpired
 
 ```solidity
 function testAddLiquidityExpired() external nonpayable
 ```
-
-
-
-
-
 
 ### testAddLiquidityInsufficientAmountA
 
@@ -72,21 +46,11 @@ function testAddLiquidityExpired() external nonpayable
 function testAddLiquidityInsufficientAmountA() external nonpayable
 ```
 
-
-
-
-
-
 ### testAddLiquidityInsufficientAmountB
 
 ```solidity
 function testAddLiquidityInsufficientAmountB() external nonpayable
 ```
-
-
-
-
-
 
 ### testAllPairs
 
@@ -94,21 +58,11 @@ function testAddLiquidityInsufficientAmountB() external nonpayable
 function testAllPairs() external nonpayable
 ```
 
-
-
-
-
-
 ### testLiquidityEth
 
 ```solidity
 function testLiquidityEth() external nonpayable
 ```
-
-
-
-
-
 
 ### testLiquidityEthSupportingFeeOnTransfer
 
@@ -116,21 +70,11 @@ function testLiquidityEth() external nonpayable
 function testLiquidityEthSupportingFeeOnTransfer() external nonpayable
 ```
 
-
-
-
-
-
 ### testLiquidityTokens
 
 ```solidity
 function testLiquidityTokens() external nonpayable
 ```
-
-
-
-
-
 
 ### testSwapETHForExactTokens
 
@@ -138,21 +82,11 @@ function testLiquidityTokens() external nonpayable
 function testSwapETHForExactTokens() external nonpayable
 ```
 
-
-
-
-
-
 ### testSwapExactETHForTokens
 
 ```solidity
 function testSwapExactETHForTokens() external nonpayable
 ```
-
-
-
-
-
 
 ### testSwapExactETHForTokensBackrun
 
@@ -160,21 +94,11 @@ function testSwapExactETHForTokens() external nonpayable
 function testSwapExactETHForTokensBackrun() external nonpayable
 ```
 
-
-
-
-
-
 ### testSwapExactETHForTokensSupportingFeeOnTransferTokens
 
 ```solidity
 function testSwapExactETHForTokensSupportingFeeOnTransferTokens() external nonpayable
 ```
-
-
-
-
-
 
 ### testSwapExactTokensForETH
 
@@ -182,21 +106,11 @@ function testSwapExactETHForTokensSupportingFeeOnTransferTokens() external nonpa
 function testSwapExactTokensForETH() external nonpayable
 ```
 
-
-
-
-
-
 ### testSwapExactTokensForETHSupportingFeeOnTransferTokens
 
 ```solidity
 function testSwapExactTokensForETHSupportingFeeOnTransferTokens() external nonpayable
 ```
-
-
-
-
-
 
 ### testSwapExactTokensForTokens
 
@@ -204,21 +118,11 @@ function testSwapExactTokensForETHSupportingFeeOnTransferTokens() external nonpa
 function testSwapExactTokensForTokens() external nonpayable
 ```
 
-
-
-
-
-
 ### testSwapExactTokensForTokensSupportingFeeOnTransferTokens
 
 ```solidity
 function testSwapExactTokensForTokensSupportingFeeOnTransferTokens() external nonpayable
 ```
-
-
-
-
-
 
 ### testSwapExpired
 
@@ -226,21 +130,11 @@ function testSwapExactTokensForTokensSupportingFeeOnTransferTokens() external no
 function testSwapExpired() external nonpayable
 ```
 
-
-
-
-
-
 ### testSwapIdenticalAddresses
 
 ```solidity
 function testSwapIdenticalAddresses() external nonpayable
 ```
-
-
-
-
-
 
 ### testSwapInsufficientOutputAmount
 
@@ -248,21 +142,11 @@ function testSwapIdenticalAddresses() external nonpayable
 function testSwapInsufficientOutputAmount() external nonpayable
 ```
 
-
-
-
-
-
 ### testSwapInvalidPath
 
 ```solidity
 function testSwapInvalidPath() external nonpayable
 ```
-
-
-
-
-
 
 ### testSwapTokensForExactETH
 
@@ -270,21 +154,11 @@ function testSwapInvalidPath() external nonpayable
 function testSwapTokensForExactETH() external nonpayable
 ```
 
-
-
-
-
-
 ### testSwapTokensForExactTokens
 
 ```solidity
 function testSwapTokensForExactTokens() external nonpayable
 ```
-
-
-
-
-
 
 ### testSwapZeroAddress
 
@@ -292,23 +166,11 @@ function testSwapTokensForExactTokens() external nonpayable
 function testSwapZeroAddress() external nonpayable
 ```
 
-
-
-
-
-
 ### testSwapZeroAmount
 
 ```solidity
 function testSwapZeroAmount() external nonpayable
 ```
-
-
-
-
-
-
-
 
 ## Events
 
@@ -318,15 +180,11 @@ function testSwapZeroAmount() external nonpayable
 event log(string)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0  | string | undefined |
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| \_0  | string | undefined   |
 
 ### log_address
 
@@ -334,15 +192,11 @@ event log(string)
 event log_address(address)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0  | address | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | address | undefined   |
 
 ### log_bytes
 
@@ -350,15 +204,11 @@ event log_address(address)
 event log_bytes(bytes)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0  | bytes | undefined |
+| Name | Type  | Description |
+| ---- | ----- | ----------- |
+| \_0  | bytes | undefined   |
 
 ### log_bytes32
 
@@ -366,15 +216,11 @@ event log_bytes(bytes)
 event log_bytes32(bytes32)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0  | bytes32 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | bytes32 | undefined   |
 
 ### log_int
 
@@ -382,15 +228,11 @@ event log_bytes32(bytes32)
 event log_int(int256)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0  | int256 | undefined |
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| \_0  | int256 | undefined   |
 
 ### log_named_address
 
@@ -398,16 +240,12 @@ event log_int(int256)
 event log_named_address(string key, address val)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | address | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| key  | string  | undefined   |
+| val  | address | undefined   |
 
 ### log_named_bool
 
@@ -415,16 +253,12 @@ event log_named_address(string key, address val)
 event log_named_bool(string key, bool val)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | bool | undefined |
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| key  | string | undefined   |
+| val  | bool   | undefined   |
 
 ### log_named_bytes
 
@@ -432,16 +266,12 @@ event log_named_bool(string key, bool val)
 event log_named_bytes(string key, bytes val)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | bytes | undefined |
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| key  | string | undefined   |
+| val  | bytes  | undefined   |
 
 ### log_named_bytes32
 
@@ -449,16 +279,12 @@ event log_named_bytes(string key, bytes val)
 event log_named_bytes32(string key, bytes32 val)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | bytes32 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| key  | string  | undefined   |
+| val  | bytes32 | undefined   |
 
 ### log_named_decimal_int
 
@@ -466,17 +292,13 @@ event log_named_bytes32(string key, bytes32 val)
 event log_named_decimal_int(string key, int256 val, uint256 decimals)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | int256 | undefined |
-| decimals  | uint256 | undefined |
+| Name     | Type    | Description |
+| -------- | ------- | ----------- |
+| key      | string  | undefined   |
+| val      | int256  | undefined   |
+| decimals | uint256 | undefined   |
 
 ### log_named_decimal_uint
 
@@ -484,17 +306,13 @@ event log_named_decimal_int(string key, int256 val, uint256 decimals)
 event log_named_decimal_uint(string key, uint256 val, uint256 decimals)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | uint256 | undefined |
-| decimals  | uint256 | undefined |
+| Name     | Type    | Description |
+| -------- | ------- | ----------- |
+| key      | string  | undefined   |
+| val      | uint256 | undefined   |
+| decimals | uint256 | undefined   |
 
 ### log_named_int
 
@@ -502,16 +320,12 @@ event log_named_decimal_uint(string key, uint256 val, uint256 decimals)
 event log_named_int(string key, int256 val)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | int256 | undefined |
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| key  | string | undefined   |
+| val  | int256 | undefined   |
 
 ### log_named_string
 
@@ -519,16 +333,12 @@ event log_named_int(string key, int256 val)
 event log_named_string(string key, string val)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | string | undefined |
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| key  | string | undefined   |
+| val  | string | undefined   |
 
 ### log_named_uint
 
@@ -536,16 +346,12 @@ event log_named_string(string key, string val)
 event log_named_uint(string key, uint256 val)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | uint256 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| key  | string  | undefined   |
+| val  | uint256 | undefined   |
 
 ### log_string
 
@@ -553,15 +359,11 @@ event log_named_uint(string key, uint256 val)
 event log_string(string)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0  | string | undefined |
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| \_0  | string | undefined   |
 
 ### log_uint
 
@@ -569,15 +371,11 @@ event log_string(string)
 event log_uint(uint256)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0  | uint256 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | uint256 | undefined   |
 
 ### logs
 
@@ -585,15 +383,8 @@ event log_uint(uint256)
 event logs(bytes)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0  | bytes | undefined |
-
-
-
+| Name | Type  | Description |
+| ---- | ----- | ----------- |
+| \_0  | bytes | undefined   |
