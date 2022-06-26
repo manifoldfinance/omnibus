@@ -1,12 +1,10 @@
 # TwoStepOwnable
 
-
-
-
-
-
-
-*Contract module which provides a basic access control mechanism, where there is an account (an owner) that can be granted exclusive access to specific functions. This module is used through inheritance. It will make available the modifier `onlyOwner`, which can be aplied to your functions to restrict their use to the owner. In order to transfer ownership, a recipient must be specified, at which point the specified recipient can call `acceptOwnership` and take ownership.*
+_Contract module which provides a basic access control mechanism, where there is an account (an owner) that can be
+granted exclusive access to specific functions. This module is used through inheritance. It will make available the
+modifier `onlyOwner`, which can be aplied to your functions to restrict their use to the owner. In order to transfer
+ownership, a recipient must be specified, at which point the specified recipient can call `acceptOwnership` and take
+ownership._
 
 ## Methods
 
@@ -16,10 +14,8 @@
 function acceptOwnership() external nonpayable
 ```
 
-
-
-*Transfers ownership of the contract to the caller. Can only be called by a new potential owner set by the current owner.*
-
+_Transfers ownership of the contract to the caller. Can only be called by a new potential owner set by the current
+owner._
 
 ### cancelOwnershipTransfer
 
@@ -27,10 +23,7 @@ function acceptOwnership() external nonpayable
 function cancelOwnershipTransfer() external payable
 ```
 
-
-
-*Cancel a transfer of ownership to a new account. Can only be called by the current owner.*
-
+_Cancel a transfer of ownership to a new account. Can only be called by the current owner._
 
 ### isOwner
 
@@ -38,16 +31,13 @@ function cancelOwnershipTransfer() external payable
 function isOwner() external view returns (bool)
 ```
 
-
-
-*Returns true if the caller is the current owner.*
-
+_Returns true if the caller is the current owner._
 
 #### Returns
 
 | Name | Type | Description |
-|---|---|---|
-| _0 | bool | undefined |
+| ---- | ---- | ----------- |
+| \_0  | bool | undefined   |
 
 ### owner
 
@@ -55,16 +45,13 @@ function isOwner() external view returns (bool)
 function owner() external view returns (address)
 ```
 
-
-
-*Returns the address of the current owner.*
-
+_Returns the address of the current owner._
 
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | address | undefined   |
 
 ### transferOwnership
 
@@ -72,17 +59,13 @@ function owner() external view returns (address)
 function transferOwnership(address newOwner) external payable
 ```
 
-
-
-*Allows a new account (`newOwner`) to accept ownership. Can only be called by the current owner.*
+_Allows a new account (`newOwner`) to accept ownership. Can only be called by the current owner._
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| newOwner | address | undefined |
-
-
+| Name     | Type    | Description |
+| -------- | ------- | ----------- |
+| newOwner | address | undefined   |
 
 ## Events
 
@@ -92,18 +75,12 @@ function transferOwnership(address newOwner) external payable
 event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| previousOwner `indexed` | address | undefined |
-| newOwner `indexed` | address | undefined |
-
-
+| Name                    | Type    | Description |
+| ----------------------- | ------- | ----------- |
+| previousOwner `indexed` | address | undefined   |
+| newOwner `indexed`      | address | undefined   |
 
 ## Errors
 
@@ -113,20 +90,8 @@ event OwnershipTransferred(address indexed previousOwner, address indexed newOwn
 error Unauthorized()
 ```
 
-
-
-
-
-
 ### ZeroAddress
 
 ```solidity
 error ZeroAddress()
 ```
-
-
-
-
-
-
-

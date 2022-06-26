@@ -29,22 +29,20 @@ const config = {
   presets: [
     [
       '@docusaurus/preset-classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/manifoldfinance/omnibus/edit/master/',
-          //     remarkPlugins: [math],
-          //     rehypePlugins: [katex],
-          //     routeBasePath: '/',
-        },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
         },
       },
     ],
+    [
+      "docusaurus-preset-shiki-twoslash",
+      {
+        themes: ["min-light", "nord"],
+      },
+    ],
   ],
+  plugins: [require.resolve("@easyops-cn/docusaurus-search-local")],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
@@ -59,6 +57,11 @@ const config = {
       tableOfContents: {
         minHeadingLevel: 2,
         maxHeadingLevel: 5,
+      },
+      docs: {
+        sidebar: {
+          autoCollapseCategories: true,
+        },
       },
       navbar: {
         hideOnScroll: true,
@@ -143,7 +146,6 @@ const config = {
         darkTheme: darkCodeTheme,
         //       additionalLanguages: ['solidity']
       },
-      hideableSidebar: true,
     },
 };
 

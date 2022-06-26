@@ -1,14 +1,10 @@
 # OpenMevLibrary
 
-*Sandy Bradley &lt;sandy@manifoldx.com&gt;, Sam Bacha &lt;sam@manifoldfinance.com&gt;*
+_Sandy Bradley &lt;sandy@manifoldx.com&gt;, Sam Bacha &lt;sam@manifoldfinance.com&gt;_
 
 > OpenMevLibrary
 
 Optimal MEV library to support OpenMevRouter
-
-
-
-
 
 ## Errors
 
@@ -18,21 +14,11 @@ Optimal MEV library to support OpenMevRouter
 error IdenticalAddresses()
 ```
 
-
-
-
-
-
 ### InsufficientLiquidity
 
 ```solidity
 error InsufficientLiquidity()
 ```
-
-
-
-
-
 
 ### InvalidPath
 
@@ -40,21 +26,11 @@ error InsufficientLiquidity()
 error InvalidPath()
 ```
 
-
-
-
-
-
 ### Overflow
 
 ```solidity
 error Overflow()
 ```
-
-
-
-
-
 
 ### ZeroAddress
 
@@ -62,20 +38,8 @@ error Overflow()
 error ZeroAddress()
 ```
 
-
-
-
-
-
 ### ZeroAmount
 
 ```solidity
 error ZeroAmount()
 ```
-
-
-
-
-
-
-

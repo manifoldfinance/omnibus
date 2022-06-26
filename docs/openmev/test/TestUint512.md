@@ -1,13 +1,5 @@
 # TestUint512
 
-
-
-
-
-
-
-
-
 ## Methods
 
 ### echidna_mulUint
@@ -16,16 +8,11 @@
 function echidna_mulUint() external view returns (bool)
 ```
 
-
-
-
-
-
 #### Returns
 
 | Name | Type | Description |
-|---|---|---|
-| _0 | bool | undefined |
+| ---- | ---- | ----------- |
+| \_0  | bool | undefined   |
 
 ### setX
 
@@ -33,15 +20,11 @@ function echidna_mulUint() external view returns (bool)
 function setX(uint256 _x) external nonpayable
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _x | uint256 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_x  | uint256 | undefined   |
 
 ### setX1
 
@@ -49,16 +32,8 @@ function setX(uint256 _x) external nonpayable
 function setX1(uint256 _x1) external nonpayable
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _x1 | uint256 | undefined |
-
-
-
-
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_x1 | uint256 | undefined   |

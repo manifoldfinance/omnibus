@@ -1,25 +1,37 @@
-/**
- * @file Prettier configuration for Conformance
- * @version 1.0.6
- * @summary base config adapted from AirBNB to maximize performance
- * @schema http://json.schemastore.org/prettierrc
+
+// @ts-check
+
+/** 
+ *  @type {import('./types').prettier}
  */
-
-'use strict';
-
 module.exports = {
   arrowParens: 'always',
   bracketSpacing: true,
   endOfLine: 'lf',
-  jsxBracketSameLine: false,
-  jsxSingleQuote: false,
-  printWidth: 120,
-  proseWrap: 'always',
-  quoteProps: 'consistent',
-  semi: true,
+  printWidth: 100,
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'all',
-  useTabs: false,
-  embeddedLanguageFormatting: 'auto',
+  quoteProps: 'as-needed',
+  proseWrap: 'never',
+  semi: true,
+  overrides: [
+    {
+      files: '*.md',
+      options: {
+        printWidth: 80,
+        tabWidth: 2,
+        arrowParens: 'always',
+        bracketSpacing: true,
+        endOfLine: 'lf',
+        proseWrap: 'always',
+        quoteProps: 'consistent',
+        semi: true,
+        singleQuote: false,
+        trailingComma: 'all',
+        useTabs: true,
+        embeddedLanguageFormatting: 'auto',
+      },
+    },
+  ],
 };
