@@ -46,11 +46,11 @@ keywords:
  */
 
 export enum PrivateTxState {
-  UNCHECKED = 'UNCHECKED',
-  PROCESSING = 'PROCESSING',
-  OK = 'OK',
-  INDETERMINATE = 'INDETERMINATE',
-  ERROR = 'ERROR',
+  UNCHECKED = "UNCHECKED",
+  PROCESSING = "PROCESSING",
+  OK = "OK",
+  INDETERMINATE = "INDETERMINATE",
+  ERROR = "ERROR",
 }
 
 export type RelayResponses = Record<string, RelayResponse>;

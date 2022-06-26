@@ -1,13 +1,5 @@
 # RevertingToken
 
-
-
-
-
-
-
-
-
 ## Methods
 
 ### allowance
@@ -16,22 +8,18 @@
 function allowance(address, address) external view returns (uint256)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
-| _1 | address | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | address | undefined   |
+| \_1  | address | undefined   |
 
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | uint256 | undefined   |
 
 ### approve
 
@@ -39,16 +27,12 @@ function allowance(address, address) external view returns (uint256)
 function approve(address, uint256) external nonpayable
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
-| _1 | uint256 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | address | undefined   |
+| \_1  | uint256 | undefined   |
 
 ### balanceOf
 
@@ -56,21 +40,17 @@ function approve(address, uint256) external nonpayable
 function balanceOf(address) external view returns (uint256)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | address | undefined   |
 
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | uint256 | undefined   |
 
 ### decimals
 
@@ -78,16 +58,11 @@ function balanceOf(address) external view returns (uint256)
 function decimals() external view returns (uint8)
 ```
 
-
-
-
-
-
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint8 | undefined |
+| Name | Type  | Description |
+| ---- | ----- | ----------- |
+| \_0  | uint8 | undefined   |
 
 ### name
 
@@ -95,16 +70,11 @@ function decimals() external view returns (uint8)
 function name() external view returns (string)
 ```
 
-
-
-
-
-
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | string | undefined |
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| \_0  | string | undefined   |
 
 ### symbol
 
@@ -112,16 +82,11 @@ function name() external view returns (string)
 function symbol() external view returns (string)
 ```
 
-
-
-
-
-
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | string | undefined |
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| \_0  | string | undefined   |
 
 ### totalSupply
 
@@ -129,16 +94,11 @@ function symbol() external view returns (string)
 function totalSupply() external view returns (uint256)
 ```
 
-
-
-
-
-
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | uint256 | undefined   |
 
 ### transfer
 
@@ -146,16 +106,12 @@ function totalSupply() external view returns (uint256)
 function transfer(address, uint256) external nonpayable
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
-| _1 | uint256 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | address | undefined   |
+| \_1  | uint256 | undefined   |
 
 ### transferFrom
 
@@ -163,19 +119,13 @@ function transfer(address, uint256) external nonpayable
 function transferFrom(address, address, uint256) external nonpayable
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
-| _1 | address | undefined |
-| _2 | uint256 | undefined |
-
-
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | address | undefined   |
+| \_1  | address | undefined   |
+| \_2  | uint256 | undefined   |
 
 ## Events
 
@@ -185,17 +135,13 @@ function transferFrom(address, address, uint256) external nonpayable
 event Approval(address indexed owner, address indexed spender, uint256 amount)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| owner `indexed` | address | undefined |
-| spender `indexed` | address | undefined |
-| amount  | uint256 | undefined |
+| Name              | Type    | Description |
+| ----------------- | ------- | ----------- |
+| owner `indexed`   | address | undefined   |
+| spender `indexed` | address | undefined   |
+| amount            | uint256 | undefined   |
 
 ### Transfer
 
@@ -203,17 +149,10 @@ event Approval(address indexed owner, address indexed spender, uint256 amount)
 event Transfer(address indexed from, address indexed to, uint256 amount)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| from `indexed` | address | undefined |
-| to `indexed` | address | undefined |
-| amount  | uint256 | undefined |
-
-
-
+| Name           | Type    | Description |
+| -------------- | ------- | ----------- |
+| from `indexed` | address | undefined   |
+| to `indexed`   | address | undefined   |
+| amount         | uint256 | undefined   |
