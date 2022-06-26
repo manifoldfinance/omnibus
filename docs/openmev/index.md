@@ -22,8 +22,8 @@ transaction cost back <br />
 
 ### How OpenMEV works
 
-The client publishes the serialized transaction signed (via `eth_sign` or `eth_signTransaction`) by the user to our backend
-using the backend repeatedly publishes the transaction, each block, to participating miners, this includes Eden
+The client publishes the serialized transaction signed (via `eth_sign` or `eth_signTransaction`) by the user to our
+backend using the backend repeatedly publishes the transaction, each block, to participating miners, this includes Eden
 Network and Flash bots. Transaction status updates can be requested via JSON-RPC or automatically relayed to the client
 with the SDK. A user can cancel an unconfirmed transaction at any time for free, and reverted transactions cost no gas
 
@@ -79,8 +79,8 @@ extracting MEV profits and returning them back to the traders.
 >
 > - Vitalik Buterin, [credible neutrality as a guiding principle](https://nakamoto.com/credible-neutrality/)
 
-This ethos is at the heart of OpenMEV. Part of establishing credible neutrality is having a clear and comprehensive
-rule book that regulates off-chain behavior and activities. Our assumption concerning governance is that methods and
+This ethos is at the heart of OpenMEV. Part of establishing credible neutrality is having a clear and comprehensive rule
+book that regulates off-chain behavior and activities. Our assumption concerning governance is that methods and
 processes that work in legacy markets may not be applicable in adversarial environments such as permissionless
 blockchains. With that understanding it is important not to rely solely on such systems and mechanics long term.
 

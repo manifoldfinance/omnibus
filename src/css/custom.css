@@ -106,7 +106,7 @@
          url('../../static/fonts/inter-v7-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../../static/fonts/inter-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-/* Switch images to match the theme color */
+/* Switch images to match the theme color 
 [data-theme-mode='dark'], [data-theme-mode='light'] {
     display: none;
 }
@@ -118,6 +118,29 @@ html[data-theme='dark'] [data-theme-mode='dark'] {
 html[data-theme='light'] [data-theme-mode='light'] {
     display: block;
 }
+*/
+
+.docusaurus-highlight-code-line {
+    background-color: rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 calc(-1 * var(--ifm-pre-padding));
+    padding: 0 var(--ifm-pre-padding);
+  }
+  
+  html[data-theme='dark'] .docusaurus-highlight-code-line {
+    background-color: rgba(5, 16, 50, 1);
+    display: block;
+  }
+  
+  
+  [data-theme="light"] .shiki.nord {
+    display: none;
+  }
+  
+  [data-theme="dark"] .shiki.min-light {
+    display: none;
+  }
+
 /* */
 
 p, a, h1, h2, h3 {

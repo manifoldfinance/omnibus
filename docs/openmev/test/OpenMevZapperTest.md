@@ -1,12 +1,6 @@
 # OpenMevZapperTest
 
-
-
 > OpenMevZapperTest
-
-
-
-
 
 ## Methods
 
@@ -16,16 +10,11 @@
 function IS_TEST() external view returns (bool)
 ```
 
-
-
-
-
-
 #### Returns
 
 | Name | Type | Description |
-|---|---|---|
-| _0 | bool | undefined |
+| ---- | ---- | ----------- |
+| \_0  | bool | undefined   |
 
 ### failed
 
@@ -33,16 +22,11 @@ function IS_TEST() external view returns (bool)
 function failed() external view returns (bool)
 ```
 
-
-
-
-
-
 #### Returns
 
 | Name | Type | Description |
-|---|---|---|
-| _0 | bool | undefined |
+| ---- | ---- | ----------- |
+| \_0  | bool | undefined   |
 
 ### setUp
 
@@ -50,34 +34,17 @@ function failed() external view returns (bool)
 function setUp() external nonpayable
 ```
 
-
-
-
-
-
 ### testZapLiquidity
 
 ```solidity
 function testZapLiquidity() external nonpayable
 ```
 
-
-
-
-
-
 ### testZapLiquidityEth
 
 ```solidity
 function testZapLiquidityEth() external nonpayable
 ```
-
-
-
-
-
-
-
 
 ## Events
 
@@ -87,15 +54,11 @@ function testZapLiquidityEth() external nonpayable
 event log(string)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0  | string | undefined |
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| \_0  | string | undefined   |
 
 ### log_address
 
@@ -103,15 +66,11 @@ event log(string)
 event log_address(address)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0  | address | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | address | undefined   |
 
 ### log_bytes
 
@@ -119,15 +78,11 @@ event log_address(address)
 event log_bytes(bytes)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0  | bytes | undefined |
+| Name | Type  | Description |
+| ---- | ----- | ----------- |
+| \_0  | bytes | undefined   |
 
 ### log_bytes32
 
@@ -135,15 +90,11 @@ event log_bytes(bytes)
 event log_bytes32(bytes32)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0  | bytes32 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | bytes32 | undefined   |
 
 ### log_int
 
@@ -151,15 +102,11 @@ event log_bytes32(bytes32)
 event log_int(int256)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0  | int256 | undefined |
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| \_0  | int256 | undefined   |
 
 ### log_named_address
 
@@ -167,16 +114,12 @@ event log_int(int256)
 event log_named_address(string key, address val)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | address | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| key  | string  | undefined   |
+| val  | address | undefined   |
 
 ### log_named_bool
 
@@ -184,16 +127,12 @@ event log_named_address(string key, address val)
 event log_named_bool(string key, bool val)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | bool | undefined |
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| key  | string | undefined   |
+| val  | bool   | undefined   |
 
 ### log_named_bytes
 
@@ -201,16 +140,12 @@ event log_named_bool(string key, bool val)
 event log_named_bytes(string key, bytes val)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | bytes | undefined |
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| key  | string | undefined   |
+| val  | bytes  | undefined   |
 
 ### log_named_bytes32
 
@@ -218,16 +153,12 @@ event log_named_bytes(string key, bytes val)
 event log_named_bytes32(string key, bytes32 val)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | bytes32 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| key  | string  | undefined   |
+| val  | bytes32 | undefined   |
 
 ### log_named_decimal_int
 
@@ -235,17 +166,13 @@ event log_named_bytes32(string key, bytes32 val)
 event log_named_decimal_int(string key, int256 val, uint256 decimals)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | int256 | undefined |
-| decimals  | uint256 | undefined |
+| Name     | Type    | Description |
+| -------- | ------- | ----------- |
+| key      | string  | undefined   |
+| val      | int256  | undefined   |
+| decimals | uint256 | undefined   |
 
 ### log_named_decimal_uint
 
@@ -253,17 +180,13 @@ event log_named_decimal_int(string key, int256 val, uint256 decimals)
 event log_named_decimal_uint(string key, uint256 val, uint256 decimals)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | uint256 | undefined |
-| decimals  | uint256 | undefined |
+| Name     | Type    | Description |
+| -------- | ------- | ----------- |
+| key      | string  | undefined   |
+| val      | uint256 | undefined   |
+| decimals | uint256 | undefined   |
 
 ### log_named_int
 
@@ -271,16 +194,12 @@ event log_named_decimal_uint(string key, uint256 val, uint256 decimals)
 event log_named_int(string key, int256 val)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | int256 | undefined |
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| key  | string | undefined   |
+| val  | int256 | undefined   |
 
 ### log_named_string
 
@@ -288,16 +207,12 @@ event log_named_int(string key, int256 val)
 event log_named_string(string key, string val)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | string | undefined |
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| key  | string | undefined   |
+| val  | string | undefined   |
 
 ### log_named_uint
 
@@ -305,16 +220,12 @@ event log_named_string(string key, string val)
 event log_named_uint(string key, uint256 val)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| key  | string | undefined |
-| val  | uint256 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| key  | string  | undefined   |
+| val  | uint256 | undefined   |
 
 ### log_string
 
@@ -322,15 +233,11 @@ event log_named_uint(string key, uint256 val)
 event log_string(string)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0  | string | undefined |
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| \_0  | string | undefined   |
 
 ### log_uint
 
@@ -338,15 +245,11 @@ event log_string(string)
 event log_uint(uint256)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0  | uint256 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | uint256 | undefined   |
 
 ### logs
 
@@ -354,17 +257,11 @@ event log_uint(uint256)
 event logs(bytes)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0  | bytes | undefined |
-
-
+| Name | Type  | Description |
+| ---- | ----- | ----------- |
+| \_0  | bytes | undefined   |
 
 ## Errors
 
@@ -374,20 +271,8 @@ event logs(bytes)
 error IdenticalAddresses()
 ```
 
-
-
-
-
-
 ### ZeroAddress
 
 ```solidity
 error ZeroAddress()
 ```
-
-
-
-
-
-
-
